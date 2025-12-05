@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BA Thematic Walking Tours | Visitas guiadas temáticas en Buenos Aires</title>
+
+    <meta name="description" content="Explorá los misterios y la historia de Buenos Aires con nuestras visitas guiadas temáticas. 
+    Tours en Recoleta, Masones y Palacio Barolo.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">    
+
+    <link rel="stylesheet" href="../css/styles.css">    
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light custom-navbar">
+            <div class="container-fluid d-flex align-items-center">
+
+                <!-- IZQUIERDA: Logo + links desktop -->
+                <div class="d-flex align-items-center">
+
+                    <!-- LOGO -->
+                    <a class="navbar-brand mb-0" href="../index.html">
+                    <img class="logotipo" src="../img/logo.png" alt="Logotipo BA thematic walking tours">
+                    </a>
+
+                    <!-- LINKS DESKTOP (≥768px) -->
+                    <ul class="navbar-nav d-none d-md-flex flex-row gap-3 ms-3">
+                    <li class="nav-item"><a class="nav-link text-black" href="../index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link text-black" href="../index.html#nuestrasVisitas">Nuestras visitas</a></li>
+                    <li class="nav-item"><a class="nav-link text-black" href="../pages/nosotros.html">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link text-black" href="../pages/contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- DERECHA: Hamburguesa (<768px) -->
+                <button class="navbar-toggler d-md-none ms-auto"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#menuRight"
+                        aria-controls="menuRight">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- MENU OFFCANVAS -->
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="menuRight">
+                    <div class="offcanvas-header">
+                    <h5 class="offcanvas-title text-black">Menú</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link text-black" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="../index.html#nuestrasVisitas">Nuestras visitas</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="../pages/nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="../pages/contacto.html">Contacto</a></li>
+                    </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <div class="contenedor-bloque-titulos">
+                <h1 class="titulo-principal">Contacto</h1>         
+            </div>
+
+            <div class="contenedorCentralFlex">
+                
+                <img class="imagenMediana" src="../img/obelisco.jpeg" alt="Foto ilustrativa Bs As">
+
+                <!-- formulario de contacto -->
+                <section class="container my-5" id="contacto">
+
+                    <form class="row g-3">
+
+                        <!-- Nombre -->
+                        <div class="col-md-6">
+                            <label for="inputNombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="inputNombre" placeholder="Tu nombre" required>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-md-6">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail" placeholder="tu@email.com" required>
+                        </div>
+
+                        <!-- Asunto -->
+                        <div class="col-12">
+                            <label for="inputAsunto" class="form-label">Asunto</label>
+                            <input type="text" class="form-control" id="inputAsunto" placeholder="Motivo del mensaje" required>
+                        </div>
+
+                        <!-- Mensaje -->
+                        <div class="col-12">
+                            <label for="inputMensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="inputMensaje" rows="5" placeholder="Escribí tu mensaje aquí..." required></textarea>
+                        </div>
+
+                        <!-- Botón -->
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-outline-secondary px-4">Enviar</button>
+                        </div>
+
+                    </form>
+                </section>
+            
+            </div>
+        </div>   
+       
+    </main>
+
+     <footer>        
+        <ul class="footer-enlaces">
+            <li><a href="../index.html">Inicio</a></li>            
+            <li><a href="../index.html#nuestrasVisitas">Nuestras visitas</a></li>
+            <li><a href="../pages/nosotros.html">Nosotros</a></li>
+            <li><a href="../pages/contacto.html">Contacto</a></li>                
+        </ul>
+    </footer>    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>       
+
+</body>
+</html>
