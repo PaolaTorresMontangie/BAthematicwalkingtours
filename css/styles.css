@@ -55,7 +55,6 @@ a {
     /* background-color: pink;  */
 } 
 
-
 .navegacion {
     font-family: 'Varela Round', 'Montserrat', sans-serif;
     color: #000000 ;
@@ -118,6 +117,7 @@ a {
 /* contenedor central usado en varias paginas */
 .contenedorCentralFlex {
     display: flex;
+    align-items: flex-start;
     gap: 1rem;
     width: 90%;
     margin: 1rem auto;
@@ -139,8 +139,8 @@ a {
 }
 
 .imagenMediana {
-    width: 100%;
-    max-width: 40%;
+    width: 25em;
+    max-width: 100%;
     object-fit: cover;
 }
 
@@ -351,6 +351,16 @@ body {
     width: 20rem;           /* solo achivo el ancho */
     height: auto;
 }
+
+.contenedorCentralFlex {
+    display: block;         /* cambio flex por block*/
+    align-items: flex-start;
+    gap: 1rem;
+    width: 90%;
+    margin: 1rem auto;
+    /* background-color: orange; */
+}
+
 }
 
 
@@ -417,6 +427,15 @@ body {
     width: 15rem;           /* solo achivo el ancho */
     height: auto;
 }
+
+.contenedorCentralFlex {
+    display: block;         /* cambio flex por block*/
+    gap: 1rem;
+    width: 90%;
+    margin: 1rem auto;
+    /* background-color: orange; */
+}
+
 
 }
 
