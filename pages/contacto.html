@@ -67,46 +67,108 @@
         </nav>
     </header>
 
-    <main>
-        <div>
-            <div class="contenedor-bloque-titulos">
-                <h1 class="titulo-principal">Contacto</h1>         
+    <!-- maximo ancho para que no quede tan estirado en desktop -->
+    <main class="container contenedor-limitado my-3">
+
+        <!-- Título -->
+        <div class="mb-4">
+            <h1 class="titulo-principal">Contacto</h1>
+        </div>
+
+        <!-- CONTENIDO flex row con espacio de 4 -->
+        <div class="row g-4 align-items-start">   
+            
+            <!-- Imagen: ocupa 4 columnas -->
+            <div class="col-md-4">
+                <img src="../img/obelisco.jpeg"
+                    class="img-fluid rounded"
+                    alt="Foto ilustrativa Buenos Aires">
             </div>
+    
+            <!-- Datos + Formulario: ocupa 8 columnas derecha -->
+            <div class="col-md-8 ps-4">
 
-            <div class="contenedorCentralFlex">
-                
-                <img class="imagenMediana" src="../img/obelisco.jpeg" alt="Foto ilustrativa Bs As">
+                <!-- Datos de contacto: flex row margin-boton 4 -->
+                <div class="row mb-4">
 
-                <!-- formulario de contacto -->
-                <section class="container my-5" id="contacto">
+                    <!-- whatsapp + mail: ocupa 6 columnas dentro de un contenedor de 8 columnas -->
+                    <div class="col-md-6">
 
-                    <form class="row g-3">
-
-                        <!-- Nombre -->
-                        <div class="col-md-10">
-                            <label for="inputNombre" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="inputNombre" placeholder="Tu nombre" required>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <img class="logo-mini" src="../img/iconoWhatsapp.svg" alt="Logo Whatsapp">
+                            <a href="https://wa.me/5491132678933?text=Hola!%20Podr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20tours?" target="_blank">+54 9 11 3267-8933</a>                        
                         </div>
 
-                        <!-- Email -->
-                        <div class="col-md-10">
-                            <label for="inputEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" placeholder="tu@email.com" required>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <img class="logo-mini" src="../img/iconoMail.svg" alt="Logo mail">
+                            <a href="mailto:ejemplo@dominio.com">Envíanos un mail</a>
                         </div>
-
-                        <!-- Mensaje -->
-                        <div class="col-md-10">
-                            <label for="inputMensaje" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="inputMensaje" rows="5" placeholder="Escribí tu mensaje aquí..." required></textarea>
+                    </div>
+                            
+                    <!-- redes: ocupa 6 columnas dentro de un contenedor de 8 columnas -->
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <img class="logo-mini" src="../img/iconoInstagram.svg" alt="Logo Instagram">                    
+                            <a href="https://www.instagram.com/ba_thematicwalkingtours" target="_blank" rel="noopener noreferrer" aria-label="Seguir a BA Thematic Walking Tours en Instagram">Síguenos en Instagram</a>
                         </div>
-
-                        <!-- Botón -->
-                        <div class="col-10 text-center">
-                            <button type="submit" class="tours-card-boton">Enviar</button>                            
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <img class="logo-mini" src="../img/iconoFacebook.svg" alt="Logo Facebook">
+                            <a href="https://www.facebook.com/ba_thematicwalkingtours" target="_blank" rel="noopener noreferrer" aria-label="Seguir a BA Thematic Walking Tours en Facebook">Síguenos en Facebook</a>
                         </div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <img class="logo-mini" src="../img/iconoLinkedin.svg" alt="Logo Linkedin">
+                            <a href="https://www.linkedin.com/in/mar%C3%ADa-luz-la-rocca-5468b616/" target="_blank" rel="noopener noreferrer" aria-label="Seguir a BA Thematic Walking Tours en Linkedin">Síguenos en LinkedIn</a>
+                        </div>
+                    </div>                        
+                </div>
+                <!-- fin datos -->
 
-                    </form>
-                </section>
+                <!-- linea horizontal para separar -->
+                <hr class="my-3"> 
+
+                <!-- Formulario: flex row espaciogrilla 3, cada elemento ocupa maximo 12 dentro del contenedor de 8 columnas -->
+                <form class="row g-4 mt-2">
+                        <legend class="visually-hidden">Formulario de contacto</legend>
+
+                            <div class="col-12">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    class="form-control"
+                                    placeholder="Tu nombre"
+                                    required>
+                            </div>
+                            
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    class="form-control"
+                                    placeholder="tu@email.com"
+                                    required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea
+                                    id="mensaje"
+                                    name="mensaje"
+                                    class="form-control"
+                                    rows="5"
+                                    placeholder="Escribí tu mensaje aquí..."
+                                    required></textarea>
+                            </div>
+
+                            <div class="col-12 text-center">
+                                <button type="submit" class="contacto-boton">Enviar Mensaje</button>
+                            </div>
+
+                </form>   
+                <!-- Fin Datos + Formulario: ocupa 8 columnas derecha -->
             
             </div>
         </div>   

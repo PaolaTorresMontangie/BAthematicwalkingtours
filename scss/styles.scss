@@ -1,0 +1,89 @@
+@import './utilities/_extends';
+@import './utilities/_variables';
+@import './utilities/_mixins';
+
+@import './layouts/_header';
+@import './layouts/_main';
+@import './layouts/_footer';
+
+
+/* media querys para tablets y celulares --------------------------------------------- */
+
+/* responsive tablet 768px */
+@media (max-width: $tamanioTablet) {
+    .contenedor-hero {  
+        /* elimino espacio superior, achico espacio a la izquierda, achico distancia entre elementos */      
+        padding-top: 0rem;              
+        @include paddingGap(2rem,1em);                
+    }
+
+    .hero-tituloSitio {
+        /* achico el font-size */        
+        @include tipografiaTamanio(2.5em,800);  
+    }
+    
+    .hero-subtitulo {
+        /* achico el font-size respecto a desktop */
+        @include tipografiaTamanio(1em,500);        
+    }
+    
+    .hero-boton {
+        /* achico el font-size */
+        @include tipografiaTamanio(1.5em, 500);
+    }
+   
+    .titulo-principal {
+        /* achico el font-size */
+        @include tipografiaTamanio(2em,750);   
+    }
+   
+    .titulo-secundario {
+        /* achico el font-size */
+        @include tipografiaTamanio(1.5em,200);    
+    }
+
+    .tours-card {
+        /* solo achivo el ancho */
+        width: 20rem;           
+    }
+}
+
+
+/* responsive telefono 375px */
+@media (max-width: $tamanioMobile) {
+    .contenedor-hero {
+        /* elimino espacio superior, achico espacio a la izquierda, achico la distancia entre elementos */      
+        padding-top: 0rem;          
+        @include paddingGap(1rem,0.5em);
+    }
+
+    .hero-tituloSitio {     
+        /* achico el font-size*/        
+        @include tipografiaTamanio(1.5em,800); 
+    }
+    
+    .hero-subtitulo{
+        /* achico el font-size respecto a desktop */
+        @include tipografiaTamanio(1em,500);    
+    }
+
+    .hero-boton{
+        /* achico el font-size */
+        @include tipografiaTamanio(1em, 500);           
+    }
+   
+    .titulo-principal {
+        /* solo achico el font-size*/
+        @include tipografiaTamanio(1.5em,750);
+    }
+    
+    .titulo-secundario {
+        /* solo achico el font-size */
+        @include tipografiaTamanio(1em,200);
+    }
+
+    .tours-card {
+        /* solo achivo el ancho */
+        width: 15rem;           
+    }
+}

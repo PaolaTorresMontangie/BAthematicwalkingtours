@@ -1,0 +1,11 @@
+/****** footer layout *****************************************/
+footer{ 
+    background-color: $color-primario;
+}
+
+.footer-enlaces{
+    @include flexRowCenter;
+    padding: 1rem;
+}
+
+/****** fin footer layout *****************************************/

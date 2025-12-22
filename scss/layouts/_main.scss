@@ -1,0 +1,168 @@
+/****** main layout *****************************************/
+*{    
+    @extend %fontPrimaria;
+    color: #000000 ;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// para menues header y footer
+ul{   
+    list-style: none;
+    gap: 1rem;
+    padding-left: 2rem;
+    @include flexRowCenter;
+    @include paddingGap(1rem,2rem);    
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* contenedor para titulos usado en varias paginas */
+.contenedor-bloque-titulos {    
+    @include flexColumn;
+    row-gap: 1rem;
+    width: 90%;
+    margin: 1rem auto;
+}
+
+/* contenedor usado en varias paginas */
+.contenedor-limitado {
+    max-width: 90%;
+}
+
+.titulo-principal {    
+    @extend %fontSecundaria;
+    @include tipografiaTamanio(3em, 750);
+    width: 80%;
+}
+
+.titulo-secundario { 
+    @extend %fontSecundaria;    
+    @include tipografiaTamanio(2em,200);
+    width: 80%;        
+}
+
+.grid-tours-card {
+    @include flexRowCenter;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem auto;    
+}
+
+.tours-card {
+    background-color: $color-fondo-primario;
+    border-radius:0.5rem;
+    width: 25rem;    
+    height: auto;
+}
+
+.tours-card-flex {    
+    @include flexColumn;    
+    gap: 1rem;
+    padding: 0.5rem;
+    align-items: center;  
+
+    h3 {
+        text-align: center;
+    }
+}
+
+/* 
+.tours-card-img {    
+    width: 100%;    
+    align-items: center;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0;    
+} */
+
+.tours-card-boton, .contacto-boton {
+    background-color: $color-fondo-secundario;
+    @include tipografiaTamanio(1rem,400);
+    border: none;
+    padding: 0.6rem 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+
+    &:hover {
+        background-color:#e4d4c5;
+            /* background-color: #587aaa; */
+    }
+
+    &:focus {
+        outline: 3px solid #587aaa;
+        outline-offset: 2px;
+    }
+}
+
+.logo-mediano{
+    width: 3rem;
+}
+
+.logo-mini {
+    width: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* grid para imagenes de tours ---------------------------------------------------- */
+.contenedor-grid-tours {
+    display: grid;
+    grid-template-areas:
+    "imagen1 imagen1 imagen2 imagen2" 
+    "imagen1 imagen1 imagen3 imagen4";
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Cuatro columnas de igual tamaño y dos filas */
+    grid-template-rows: 12rem 12rem;
+    align-content:center;
+    justify-content: center;
+    align-items: start;
+    width: 90%;
+    padding: 1rem;
+    margin: 1rem auto;
+    gap: 1rem; /* Espacio entre las celdas */     
+    border-radius: 0.5rem;    
+    background-color: $color-fondo-primario;
+    overflow: hidden;
+}
+
+.tours-imagen1 {
+    grid-area: imagen1;     /* Asigna el elemento a la cuadrícula de área "imagen1" */
+    @include imagenGrilla;
+}
+
+.tours-imagen2 {
+    grid-area: imagen2;
+    @include imagenGrilla;
+}
+
+.tours-imagen3 {
+    grid-area: imagen3;
+    @include imagenGrilla;
+}
+
+.tours-imagen4 {
+    grid-area: imagen4;
+    @include imagenGrilla;
+}
+
+.contenedor-texto-tours {
+    @include flexColumn;
+    row-gap:1rem;
+    width: 85%;
+    margin: 2rem auto;
+
+    h2 {
+        margin-top: 0.5em;
+    }
+}
+/* fin paginas tours */
+
+/****** fin main layout *****************************************/

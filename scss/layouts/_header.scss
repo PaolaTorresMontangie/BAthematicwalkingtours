@@ -1,0 +1,67 @@
+/****** header layout *****************************************/
+/* header con imagen de fondo */
+.index-header{
+    background-image: url(../img/headerBackground.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.logotipo {
+    width: 8rem;   
+    max-width: 100%;     
+    min-width: 6rem;
+    height: auto;
+}
+
+/* contendor para la descripcion del sitio */
+.contenedor-hero {
+    @include flexColumn;
+    @extend %fontSecundaria;
+    justify-content: flex-start;    
+    align-items: flex-start;        
+    height: 80%;
+    max-height: 80%;
+    padding-top: 2rem;
+    @include paddingGap(5rem,3em);
+}
+
+/* titulo principal del sitio */
+.hero-tituloSitio {    
+    @extend %fontSecundaria;
+    @include tipografiaTamanio(4em,800);
+    width: 90%;
+    max-width: 80%;
+    text-align: left;       
+}
+
+.hero-subtitulo {
+    @include tipografiaTamanio (1.5em, 500);
+    max-width: 90%;    
+    text-align: left;       
+}
+
+.hero-boton {
+    @extend %fontSecundaria;
+    @include tipografiaTamanio(2em,500); 
+    background-color: $color-secundario;
+    color: #ffffff;     
+    padding: 0.5em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+
+    &:hover {
+        background-color: #587aaa; 
+    }
+}
+
+/* bootstrap navbar personalizada para paginas sin Hero ------------------- */
+.custom-navbar {
+    background-color: $color-primario !important; /* mismo color que footer */    
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+/****** fin header layout *****************************************/

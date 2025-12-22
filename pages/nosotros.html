@@ -12,25 +12,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">    
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">    
     <link rel="stylesheet" href="../css/styles.css">    
 </head>
 
 <body>
+
     <header>
         <nav class="navbar navbar-light custom-navbar">
             <div class="container-fluid d-flex align-items-center">
-
-                <!-- IZQUIERDA: Logo + links desktop -->
                 <div class="d-flex align-items-center">
-
-                    <!-- LOGO -->
                     <a class="navbar-brand mb-0" href="../index.html">
-                    <img class="logotipo" src="../img/logo.png" alt="Logotipo BA thematic walking tours">
+                        <img class="logotipo" src="../img/logo.png" alt="Logotipo BA thematic walking tours">
                     </a>
 
-                    <!-- LINKS DESKTOP (≥768px) -->
                     <ul class="navbar-nav d-none d-md-flex flex-row gap-3 ms-3">
                         <li class="nav-item"><a class="nav-link text-black" href="../index.html">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link text-black" href="../index.html#nuestrosTours">Nuestros Tours</a></li>
@@ -39,27 +34,24 @@
                     </ul>
                 </div>
 
-                <!-- DERECHA: Hamburguesa (<768px) -->
                 <button class="navbar-toggler d-md-none ms-auto"
                         type="button"
                         data-bs-toggle="offcanvas"
-                        data-bs-target="#menuRight"
-                        aria-controls="menuRight">
+                        data-bs-target="#menuRight">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- MENU OFFCANVAS -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="menuRight">
                     <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-black">Menú</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                        <h5 class="offcanvas-title">Menú</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link text-black" href="../index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="../index.html#nuestrosTours">Nuestros Tours</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="./nosotros.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="./contacto.html">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html#nuestrosTours">Nuestros Tours</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
                         </ul>
                     </div>
                 </div>
@@ -67,52 +59,55 @@
         </nav>
     </header>
 
-    <main>
-        <div>
-            <div class="contenedor-bloque-titulos">
-                <h1 class="titulo-principal">Sobre Nosotros</h1>
-                <h2 class="titulo-secundario">Maria Luz La Rocca</h2>            
+
+    <main class="container contenedor-limitado my-3">
+
+        <!-- Títulos -->
+        <div class="mb-4">
+            <h1 class="titulo-principal">Sobre Nosotros</h1>
+            <h2 class="titulo-secundario">Maria Luz La Rocca</h2>
+        </div>
+
+        <!-- Contenido -->
+        <div class="row g-4 align-items-start">
+
+            <!-- Imagen -->
+            <div class="col-md-4">
+                <img src="../img/MariaLuzLaRocca.jpeg"
+                    class="img-fluid rounded"
+                    alt="Retrato de María Luz La Rocca, guía turística de BA Thematic Walking Tours">
             </div>
-            
-            <div class="contenedorCentralFlex">
-                <img class="imagenMediana" src="../img/fotoLuz.jpeg" alt="Retrato de María Luz La Rocca, guía turística de BA Thematic Walking Tours">
 
-                <div class="p-4">
-                    <p>Luz es una experta en turismo argentino y guía de habla inglesa, apasionada por revelar lo oculto. Estudió Turismo en Buenos Aires y fue guía del Teatro Colón, en la misma ciudad. Luego, durante los 6 años que vivió en Londres, se fascinó con la arquitectura y cultura de las diferentes ciudades europeas que visitó y volvió con el interés de revalorizar la propia por medio de visitas a extranjeros. Su fascinación por la masonería comenzó mientras observaba la arquitectura en Europa y Buenos Aires, donde convergen geometría, simbolismo y poder.</p>
+            <!-- Texto -->
+            <div class="col-md-8">
+                <p>Luz es una experta en turismo argentino y guía de habla inglesa, apasionada por revelar lo oculto. Estudió Turismo en Buenos Aires y fue guía del Teatro Colón, en la misma ciudad. Luego, durante los 6 años que vivió en Londres, se fascinó con la arquitectura y cultura de las diferentes ciudades europeas que visitó y volvió con el interés de revalorizar la propia por medio de visitas a extranjeros. Su fascinación por la masonería comenzó mientras observaba la arquitectura en Europa y Buenos Aires, donde convergen geometría, simbolismo y poder.</p>
 
-                    <p>Con años de experiencia guiando a visitantes internacionales y recorriendo diversos puntos de interés cultural en numerosas ciudades europeas, transforma cada paseo en una exploración íntima del alma oculta de la ciudad. Luz cree que cada monumento, cada símbolo y cada historia encierra un mensaje, si uno sabe mirar.</p>
+                <p>Con años de experiencia guiando a visitantes internacionales y recorriendo diversos puntos de interés cultural en numerosas ciudades europeas, transforma cada paseo en una exploración íntima del alma oculta de la ciudad. Luz cree que cada monumento, cada símbolo y cada historia encierra un mensaje, si uno sabe mirar.</p>
 
-                    <p class="fw-semibold fst-italic">“Mis tours no se centran en lo que ves, sino en lo que descubres”</p>
+                <p class="fw-semibold fst-italic">“Mis tours no se centran en lo que ves, sino en lo que descubres”</p>
 
+                <div class="d-flex gap-3 mt-3">
                     <a href="https://www.instagram.com/ba_thematicwalkingtours/" target="_blank" rel="noopener noreferrer">
-                        <img class="logo-instagram" src="../img/instagram.png" alt="Logo Instagram">
+                        <img class="logo-mediano" src="../img/iconoInstagramColor.png" alt="Logo Instagram">
                     </a>                    
-                    
-                    <a href="https://www.linkedin.com/in/mar%C3%ADa-luz-la-rocca-5468b616/" target="_blank" rel="noopener noreferrer"> 
-                        <img class="logo-linkedin" src="../img/linkedin.png" alt="Logo Linkedin">
+                    <a href="https://www.linkedin.com/in/mar%C3%ADa-luz-la-rocca-5468b616/" target="_blank" rel="noopener noreferrer">
+                        <img class="logo-mediano" src="../img/iconoLinkedinColor.png" alt="Logo Linkedin">
                     </a>
-                </div>                   
+                </div>
             </div>
-
-            <!--
-            <h2 class="titulo-secundario">Nuestra Ciudad</h2>            
-            <iframe src="https://www.youtube.com/embed/rYp61R18DCE?si=wgpq-GOYo4uQp-WN" width="600" height="400" frameborder="0"
-            allowfullscreen title="Video de Bs As"></iframe>            
-            -->
-
-        </div>   
+        </div>
     </main>
 
-    <footer>        
+    <footer>
         <ul class="footer-enlaces">
-            <li><a href="../index.html">Inicio</a></li>            
+            <li><a href="../index.html">Inicio</a></li>
             <li><a href="../index.html#nuestrosTours">Nuestros Tours</a></li>
             <li><a href="./nosotros.html">Nosotros</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>                
+            <li><a href="./contacto.html">Contacto</a></li>
         </ul>
-    </footer>  
+    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
