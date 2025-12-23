@@ -9,8 +9,7 @@
     flex-direction: column; 
 }
 
-/* ajusta la imagen al ancho y alto del contendor y cover para que la imagen no se distorsione */
-@mixin imagenGrilla {
+@mixin imagenGrilla {    
     width: 100%;
     height: 100%;
     object-fit: cover;

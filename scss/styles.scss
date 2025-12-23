@@ -9,12 +9,12 @@
 
 /* media querys para tablets y celulares --------------------------------------------- */
 
-/* responsive tablet 768px */
+/* responsive tablet */
 @media (max-width: $tamanioTablet) {
     .contenedor-hero {  
         /* elimino espacio superior, achico espacio a la izquierda, achico distancia entre elementos */      
         padding-top: 0rem;              
-        @include paddingGap(2rem,1em);                
+        @include paddingGap(2rem,1em);
     }
 
     .hero-tituloSitio {
@@ -49,12 +49,13 @@
 }
 
 
-/* responsive telefono 375px */
+/* responsive mobile */
 @media (max-width: $tamanioMobile) {
     .contenedor-hero {
         /* elimino espacio superior, achico espacio a la izquierda, achico la distancia entre elementos */      
         padding-top: 0rem;          
         @include paddingGap(1rem,0.5em);
+        background-color: green;
     }
 
     .hero-tituloSitio {     

@@ -7,7 +7,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* ajusta la imagen al ancho y alto del contendor y cover para que la imagen no se distorsione */
 /****** header layout *****************************************/
 /* header con imagen de fondo */
 .index-header {
@@ -265,7 +264,7 @@ footer {
 
 /****** fin footer layout *****************************************/
 /* media querys para tablets y celulares --------------------------------------------- */
-/* responsive tablet 768px */
+/* responsive tablet */
 @media (max-width: 768px) {
   .contenedor-hero {
     /* elimino espacio superior, achico espacio a la izquierda, achico distancia entre elementos */
@@ -303,13 +302,14 @@ footer {
     width: 20rem;
   }
 }
-/* responsive telefono 375px */
-@media (max-width: 480px) {
+/* responsive mobile */
+@media (max-width: 390px) {
   .contenedor-hero {
     /* elimino espacio superior, achico espacio a la izquierda, achico la distancia entre elementos */
     padding-top: 0rem;
     padding-left: 1rem;
     row-gap: 0.5em;
+    background-color: green;
   }
   .hero-tituloSitio {
     /* achico el font-size*/
