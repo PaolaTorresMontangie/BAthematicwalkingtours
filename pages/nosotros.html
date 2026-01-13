@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BA Thematic Walking Tours | Visitas guiadas temáticas en Buenos Aires</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
 
-    <meta name="description" content="Descubre el alma oculta de Buenos Aires. Explora Buenos Aires más allá del tango y el asado: descubre sus historias ocultas en inglés, con una experta local.">
+    <title>Guided Walking Tours in Buenos Aires | BA Thematic Walking Tours</title>
+
+    <meta name="description"
+    content="Learn about BA Thematic Walking Tours and Maria Luz La Rocca, an English-speaking local guide offering guided walking tours in Buenos Aires for American travelers.">
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="en-us"
+        href="https://www.bathematicwalkingtours.com/pages/nosotros.html">
+
+    <link rel="alternate" hreflang="es-ar"
+        href="https://www.bathematicwalkingtours.com/es/pages/nosotros.html">
+
+    <link rel="alternate" hreflang="x-default"
+        href="https://www.bathematicwalkingtours.com/pages/nosotros.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,12 +39,22 @@
                     </a>
 
                     <ul class="navbar-nav d-none d-md-flex flex-row gap-3 ms-3">
-                        <li class="nav-item"><a class="nav-link text-black" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="../index.html#nuestrosTours">Nuestros Tours</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="./nosotros.html">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="./contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="../index.html#tours">Tours</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="./nosotros.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="./contacto.html">Contact</a></li>
                     </ul>
                 </div>
+
+                <!-- SELECTOR DE IDIOMA (DESKTOP) -->
+                <div class="lang-switch d-none d-md-flex ms-auto me-3">                    
+                    <a href="./nosotros.html" aria-label="English">
+                        <img class="logo-mediano" src="../img/united-states-flag-icon.webp" alt="English">
+                    </a>                                
+                    <a href="../es/pages/nosotros.html" aria-label="Español">
+                        <img class="logo-mediano" src="../img/spain-country-flag-icon.png" alt="Español">
+                    </a>
+                </div>                
 
                 <button class="navbar-toggler d-md-none ms-auto"
                         type="button"
@@ -43,15 +65,26 @@
 
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="menuRight">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title">Menú</h5>
+                        <h5 class="offcanvas-title">Menu</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="../index.html#nuestrosTours">Nuestros Tours</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="../index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="../index.html#tours">Tours</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="./nosotros.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="./contacto.html">Contact</a></li>
+
+                            <!-- Selector idioma mobile -->
+                            <li class="nav-item mt-3">
+                                <a href="./nosotros.html" aria-label="English">
+                                    <img class="logo-mini" src="../img/united-states-flag-icon.webp" alt="English">
+                                </a>                                
+                                <a href="../es/pages/nosotros.html" aria-label="Español">
+                                    <img class="logo-mini" src="../img/spain-country-flag-icon.png" alt="Español">
+                                </a>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
@@ -64,8 +97,8 @@
 
         <!-- Títulos -->
         <div class="mb-4">
-            <h1 class="titulo-principal">Sobre Nosotros</h1>
-            <h2 class="titulo-secundario">Maria Luz La Rocca</h2>
+            <h1 class="titulo-principal">About BA Thematic Walking Tours</h1>
+            <h2 class="titulo-secundario">Maria Luz La Rocca - Local Expert Guide</h2>            
         </div>
 
         <!-- Contenido -->
@@ -75,16 +108,19 @@
             <div class="col-md-4">
                 <img src="../img/MariaLuzLaRocca.jpeg"
                     class="img-fluid rounded"
-                    alt="Retrato de María Luz La Rocca, guía turística de BA Thematic Walking Tours">
+                    alt="Portrait of Maria Luz La Rocca, local expert guide in Buenos Aires">
             </div>
 
             <!-- Texto -->
             <div class="col-md-8">
-                <p>Luz es una experta en turismo argentino y guía de habla inglesa, apasionada por revelar lo oculto. Estudió Turismo en Buenos Aires y fue guía del Teatro Colón, en la misma ciudad. Luego, durante los 6 años que vivió en Londres, se fascinó con la arquitectura y cultura de las diferentes ciudades europeas que visitó y volvió con el interés de revalorizar la propia por medio de visitas a extranjeros. Su fascinación por la masonería comenzó mientras observaba la arquitectura en Europa y Buenos Aires, donde convergen geometría, simbolismo y poder.</p>
+                <p>Luz is an expert in Argentine tourism and an English-speaking guide, passionate about revealing the hidden. She studied Tourism in Buenos Aires and worked as a guide at the Teatro Colón in the same city. Later, during the six years she lived in London, she became fascinated by the architecture and culture of the various European cities she visited and returned with a desire to re-evaluate her own culture through visits to foreigners. Her fascination with Freemasonry began while observing architecture in Europe and Buenos Aires, where geometry, symbolism, and power converge.</p>
 
-                <p>Con años de experiencia guiando a visitantes internacionales y recorriendo diversos puntos de interés cultural en numerosas ciudades europeas, transforma cada paseo en una exploración íntima del alma oculta de la ciudad. Luz cree que cada monumento, cada símbolo y cada historia encierra un mensaje, si uno sabe mirar.</p>
+                <p>With years of experience guiding international visitors, and visiting all kind of Cultural 
+                points in many European cities, she transforms each walk into an intimate exploration of the city’s hidden soul.
+                Luz believes every monument, every symbol, and every story carries a message — if you know how to look.
+                </p>                
 
-                <p class="fw-semibold fst-italic">“Mis tours no se centran en lo que ves, sino en lo que descubres”</p>
+                <p class="fw-semibold fst-italic">“My tours are not about what you see — they’re about what you discover”</p>
 
                 <div class="d-flex gap-3 mt-3">
                     <a href="https://www.instagram.com/ba_thematicwalkingtours/" target="_blank" rel="noopener noreferrer">
@@ -100,10 +136,10 @@
 
     <footer>
         <ul class="footer-enlaces">
-            <li><a href="../index.html">Inicio</a></li>
-            <li><a href="../index.html#nuestrosTours">Nuestros Tours</a></li>
-            <li><a href="./nosotros.html">Nosotros</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#tours">Tours</a></li>
+            <li><a href="./nosotros.html">About</a></li>
+            <li><a href="./contacto.html">Contact</a></li>
         </ul>
     </footer>
 

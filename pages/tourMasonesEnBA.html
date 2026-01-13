@@ -1,19 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BA Thematic Walking Tours | Visitas guiadas temáticas en Buenos Aires</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
 
-    <meta name="description" content="Descubre el alma oculta de Buenos Aires. Explora Buenos Aires más allá del tango y el asado: descubre sus historias ocultas en inglés, con una experta local.">
+    <title>Masonic Walking Tour in Buenos Aires | BA Thematic Walking Tours</title>
+
+    <meta name="description"
+    content="Explore Buenos Aires through a Masonic lens on a guided walking tour. Discover hidden symbols, sacred geometry and secret meanings woven into the city’s architecture with a local expert guide.">
+
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="en-us"
+    href="https://www.bathematicwalkingtours.com/pages/tourMasonesEnBA.html">
+
+    <link rel="alternate" hreflang="es-ar"
+    href="https://www.bathematicwalkingtours.com/es/pages/tourMasonesEnBA.html">
+
+    <link rel="alternate" hreflang="x-default"
+    href="https://www.bathematicwalkingtours.com/pages/tourMasonesEnBA.html">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">    
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">    
     <link rel="stylesheet" href="../css/styles.css">    
 </head>
 
@@ -21,98 +32,113 @@
     <header>
         <nav class="navbar navbar-light custom-navbar">
             <div class="container-fluid d-flex align-items-center">
-
-                <!-- IZQUIERDA: Logo + links desktop -->
                 <div class="d-flex align-items-center">
-
-                    <!-- LOGO -->
                     <a class="navbar-brand mb-0" href="../index.html">
-                    <img class="logotipo" src="../img/logo.png" alt="Logotipo BA thematic walking tours">
+                        <img class="logotipo" src="../img/logo.png" alt="Logotipo BA thematic walking tours">
                     </a>
 
-                    <!-- LINKS DESKTOP (≥768px) -->
                     <ul class="navbar-nav d-none d-md-flex flex-row gap-3 ms-3">
-                        <li class="nav-item"><a class="nav-link text-black" href="../index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="../index.html#nuestrosTours">Nuestros Tours</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="./nosotros.html">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="./contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="../index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="../index.html#tours">Tours</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="./nosotros.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link text-black" href="./contacto.html">Contact</a></li>
                     </ul>
                 </div>
 
-                <!-- DERECHA: Hamburguesa (<768px) -->
+                <!-- SELECTOR DE IDIOMA (DESKTOP) -->
+                <div class="lang-switch d-none d-md-flex ms-auto me-3">                    
+                    <a href="./tourMasonesEnBA.html" aria-label="English">
+                        <img class="logo-mediano" src="../img/united-states-flag-icon.webp" alt="English">
+                    </a>                                
+                    <a href="../es/pages/tourMasonesEnBA.html" aria-label="Español">
+                        <img class="logo-mediano" src="../img/spain-country-flag-icon.png" alt="Español">
+                    </a>
+                </div>                
+
                 <button class="navbar-toggler d-md-none ms-auto"
                         type="button"
                         data-bs-toggle="offcanvas"
-                        data-bs-target="#menuRight"
-                        aria-controls="menuRight">
+                        data-bs-target="#menuRight">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- MENU OFFCANVAS -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="menuRight">
                     <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-black">Menú</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                        <h5 class="offcanvas-title">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link text-black" href="../index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="../index.html#nuestrosTours">Nuestros Tours</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="./nosotros.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="./contacto.html">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="../index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="../index.html#tours">Tours</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="./nosotros.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link text-black" href="./contacto.html">Contact</a></li>
+
+                            <!-- Selector idioma mobile -->
+                            <li class="nav-item mt-3">
+                                <a href="./tourMasonesEnBA.html" aria-label="English">
+                                    <img class="logo-mini" src="../img/united-states-flag-icon.webp" alt="English">
+                                </a>                                
+                                <a href="../es/pages/tourMasonesEnBA.html" aria-label="Español">
+                                    <img class="logo-mini" src="../img/spain-country-flag-icon.png" alt="Español">
+                                </a>
+                            </li>
+
                         </ul>
                     </div>
                 </div>
             </div>
         </nav>
-    </header>
+    </header>    
 
     <main class="container contenedor-principal-main">
 
         <!-- Títulos -->
         <div class="mb-4">
-            <h1 class="titulo-principal">Caminata Masónica por Buenos Aires</h1>
-            <h2 class="titulo-secundario">&#9733; 4.9 (ver opiniones)</h2>              
+            <h1 class="titulo-principal">Masonic Walking Tour in Buenos Aires</h1>
+            <h2 class="titulo-secundario">&#9733; 4.9 (see reviews)</h2>            
         </div>
 
         <div class="contenedor-grid-tours">
-            <img src="../img/masonesEnBa001.jpg" alt="masones en BA" class="tours-imagen1">
-            <img src="../img/masonesEnBa002.jpg" alt="masones en BA" class="tours-imagen2">
-            <img src="../img/masonesEnBa003.jpg" alt="masones en BA" class="tours-imagen3">
-            <img src="../img/masonesEnBa004.jpg" alt="masones en BA" class="tours-imagen4">
+            <img src="../img/masonesEnBa001.jpg" alt="Masonic symbols in Buenos Aires" class="tours-imagen1">
+            <img src="../img/masonesEnBa002.jpg" alt="Masonic symbols in Buenos Aires" class="tours-imagen2">
+            <img src="../img/masonesEnBa003.jpg" alt="Masonic symbols in Buenos Aires" class="tours-imagen3">
+            <img src="../img/masonesEnBa004.jpg" alt="Masonic symbols in Buenos Aires" class="tours-imagen4">
         </div>
 
         <div class="contenedor-texto-tours">
-            <h2 class="titulo-secundario">Qué haremos en este tour?</h2>
-            
-            <p>Desde el Congreso hasta el Café Tortoni y la Avenida de Mayo, descubre cómo Buenos Aires se construyó sobre los principios masónicos de iluminación, razón y simetría. Aprende a leer la ciudad como un templo de luz y geometría. Cada piedra, cada fachada, cada ángulo esconde una historia. Explora la red invisible que conecta los lugares más misteriosos de Buenos Aires.
-            </p>     
+            <h2 class="titulo-secundario">What will we do on this tour?</h2>
 
-            <h2 class="titulo-secundario">Detalles del tour</h2>
-            <p>🕰 Duración: 2 horas</p>                             
-            <p>🎧 Idioma: Inglés</p>
-            <p>💵 Tours privados o para grupos pequeños disponibles</p>
-                            
-            <h2 class="titulo-secundario">Recorrido del tour</h2>
-            <p>📍 Cementerio de la Recoleta - Donde los símbolos masónicos descansan en silencio</p>
-            <p>📍 Logia en la calle Perón - El corazón masónico de la ciudad</p>
-            <p>📍 Congreso - Geometría de poder y luz</p>
-            <p>📍 Café Tortoni - Punto de encuentro de poetas e iniciados</p>
-            <p>📍 Confitería del Molino - El templo art nouveau de la perfección</p>
-            <p>📍 Casa Rosada - Poder envuelto en simbolismo</p>
-            <p>📍 Palacio Barolo - ¿La Divina Comedia representada en un edificio?</p>                    
+            <p>
+            From the National Congress to Café Tortoni and Avenida de Mayo, discover how Buenos Aires was built upon Masonic principles of enlightenment, reason, and symmetry. Learn to read the city as a temple of light and geometry. Every stone, every façade, every angle hides a story. Explore the invisible network that connects the most mysterious places in Buenos Aires.
+            </p>
+
+            <h2 class="titulo-secundario">Tour details</h2>
+            <p>🕰 Duration: 2 hours</p>
+            <p>🎧 Language: English</p>
+            <p>💵 Private tours or small group tours available</p>
+
+            <h2 class="titulo-secundario">Tour itinerary</h2>
+            <p>📍 Recoleta Cemetery - Where Masonic symbols rest in silence</p>
+            <p>📍 Masonic Lodge on Perón Street – The Masonic heart of the city</p>
+            <p>📍 National Congress – Geometry of power and light</p>
+            <p>📍 Café Tortoni – Meeting place for poets and initiates</p>
+            <p>📍 Confitería del Molino – An Art Nouveau temple of perfection</p>
+            <p>📍 Casa Rosada – Power wrapped in symbolism</p>
+            <p>📍 Palacio Barolo – Is Dante’s Divine Comedy hidden inside a building?</p>
+
         </div>        
 
     </main>
 
-    <footer>        
+    <footer>
         <ul class="footer-enlaces">
-            <li><a href="../index.html">Inicio</a></li>            
-            <li><a href="../index.html#nuestrosTours">Nuestros Tours</a></li>
-            <li><a href="./nosotros.html">Nosotros</a></li>
-            <li><a href="./contacto.html">Contacto</a></li>                
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#tours">Tours</a></li>
+            <li><a href="./nosotros.html">About</a></li>
+            <li><a href="./contacto.html">Contact</a></li>
         </ul>
-    </footer>  
+    </footer> 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>   
         

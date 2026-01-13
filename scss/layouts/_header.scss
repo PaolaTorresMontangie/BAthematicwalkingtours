@@ -1,7 +1,7 @@
 /****** header layout *****************************************/
 /* header con imagen de fondo */
-.index-header{
-    background-image: url(../img/headerBackground.jpg); 
+.index-header{    
+    background-image: url("../img/headerBackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -15,7 +15,7 @@
     height: auto;
 }
 
-/* contendor para la descripcion del sitio */
+/* contenedor para la descripcion del sitio */
 .contenedor-hero {
     @include flexColumn;
     @extend %fontSecundaria;
@@ -54,6 +54,21 @@
 
     &:hover {
         background-color: #587aaa; 
+    }
+}
+
+.lang-switch {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+    img {
+    cursor: pointer;
+    opacity: 0.85;  
+    }
+
+    img:hover {
+        opacity: 1;
     }
 }
 
