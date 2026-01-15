@@ -121,7 +121,7 @@ a {
 }
 
 .titulo-principal {
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 750;
   width: 80%;
 }
@@ -130,10 +130,6 @@ a {
   font-size: 2em;
   font-weight: 200;
   width: 80%;
-}
-
-.textos-descriptivos {
-  margin: 1rem auto;
 }
 
 .grid-tours-card {
@@ -189,6 +185,12 @@ a {
   width: 1.5rem;
   padding: 0;
   margin: 0;
+}
+
+/* bootstrap acordeon personalizado ------------------- */
+.custom-acordeon-boton {
+  background-color: #f8f7f3 !important;
+  color: #000000 !important;
 }
 
 /* grid para imagenes de tours ---------------------------------------------------- */

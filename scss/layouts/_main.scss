@@ -18,6 +18,8 @@ ul{
 }
 
 a {
+    // text-decoration: underline; /* linea debajo de los links */
+    // text-underline-offset: 5px; /* Ajusta la distancia (ej: 5 píxeles) */
     text-decoration: none;
     color: #000000;
 }
@@ -31,7 +33,7 @@ a {
 
 .titulo-principal {    
     @extend %fontSecundaria;
-    @include tipografiaTamanio(3em, 750);
+    @include tipografiaTamanio(2.5em, 750);
     width: 80%;
 }
 
@@ -39,12 +41,6 @@ a {
     @extend %fontSecundaria;    
     @include tipografiaTamanio(2em,200);
     width: 80%;        
-}
-
-.textos-descriptivos {
-    // font-size: 1rem;  
-    // font-weight: 400;
-    margin: 1rem auto;
 }
 
 .grid-tours-card {
@@ -107,6 +103,14 @@ a {
     padding: 0;
     margin: 0;
 }
+
+/* bootstrap acordeon personalizado ------------------- */
+.custom-acordeon-boton {    
+  background-color: $color-fondo-primario !important;
+  color:#000000 !important;
+}
+
+
 
 /* grid para imagenes de tours ---------------------------------------------------- */
 .contenedor-grid-tours {
