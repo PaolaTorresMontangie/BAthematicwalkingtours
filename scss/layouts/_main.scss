@@ -39,7 +39,7 @@ a {
 
 .titulo-secundario { 
     @extend %fontSecundaria;    
-    @include tipografiaTamanio(2em,200);
+    @include tipografiaTamanio(1.8em,200);
     width: 80%;        
 }
 
@@ -105,11 +105,41 @@ a {
 }
 
 /* bootstrap acordeon personalizado ------------------- */
-.custom-acordeon-boton {    
-  background-color: $color-fondo-primario !important;
-  color:#000000 !important;
-}
+.section-faq {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
 
+    // section de pregunta y respuesta
+    .accordion-item {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $color-grisoscuro; // linea de separacion
+    }  
+
+    // boton de pregunta
+    .accordion-button {
+        background-color: transparent;
+        padding: 1.2rem 0;
+
+        &:not(.collapsed) {
+            color: #000;
+            background-color: transparent;
+            box-shadow: none;
+        }
+
+        &:focus {
+            box-shadow: none; /* saca el color azul del borde */
+            border-color: transparent;
+        }    
+    }
+
+    // respuesta
+    .accordion-body {
+        padding: 0.5rem 0 1.2rem;
+        color: $color-texto-gris;
+    }
+}
 
 
 /* grid para imagenes de tours ---------------------------------------------------- */

@@ -127,7 +127,7 @@ a {
 }
 
 .titulo-secundario {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: 200;
   width: 80%;
 }
@@ -188,9 +188,32 @@ a {
 }
 
 /* bootstrap acordeon personalizado ------------------- */
-.custom-acordeon-boton {
-  background-color: #f8f7f3 !important;
-  color: #000000 !important;
+.section-faq {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+.section-faq .accordion-item {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1490196078);
+}
+.section-faq .accordion-button {
+  background-color: transparent;
+  padding: 1.2rem 0;
+}
+.section-faq .accordion-button:not(.collapsed) {
+  color: #000;
+  background-color: transparent;
+  box-shadow: none;
+}
+.section-faq .accordion-button:focus {
+  box-shadow: none; /* saca el color azul del borde */
+  border-color: transparent;
+}
+.section-faq .accordion-body {
+  padding: 0.5rem 0 1.2rem;
+  color: #444;
 }
 
 /* grid para imagenes de tours ---------------------------------------------------- */
