@@ -1,6 +1,18 @@
 /****** footer layout *****************************************/
 footer{ 
-    background-color: $color-primario;
+    background-color: $color-azulmarino;
+
+    a {
+        @extend %fontSecundaria;
+        @include tipografiaTamanio(1.2em,400);
+        // text-transform: uppercase;
+        color: #fff;
+        padding: 0.5rem;
+
+        &:hover {
+            color:#e7b11c;        
+        }
+    }
 }
 
 .footer-enlaces{

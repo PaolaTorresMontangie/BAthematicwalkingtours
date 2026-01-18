@@ -3,7 +3,7 @@
   font-family: "Varela Round", "Montserrat", sans-serif;
 }
 
-.titulo-secundario, .titulo-principal, .hero-boton, .hero-tituloSitio, .contenedor-hero {
+footer a, .titulo-secundario, .titulo-principal, .custom-navbar a, .hero-boton, .hero-tituloSitio, .contenedor-hero {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -13,14 +13,14 @@
   background-image: url("../img/headerBackground.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
+  height: 95vh;
+  position: relative;
 }
 
 .logotipo {
-  width: 8rem;
+  width: 5rem;
   max-width: 100%;
-  min-width: 6rem;
+  min-width: 3rem;
   height: auto;
 }
 
@@ -32,15 +32,20 @@
   align-items: flex-start;
   height: 80%;
   max-height: 80%;
-  padding-top: 2rem;
+  padding-top: 3rem;
   padding-left: 5rem;
   row-gap: 3em;
 }
 
+.contenedor-hero-fondoOscuro {
+  background-color: rgba(0, 0, 0, 0.2); /* Fondo negro semitransparente */
+}
+
 /* titulo principal del sitio */
 .hero-tituloSitio {
-  font-size: 4em;
+  font-size: 5.5em;
   font-weight: 800;
+  color: #fff;
   width: 90%;
   max-width: 80%;
   text-align: left;
@@ -49,6 +54,7 @@
 .hero-subtitulo {
   font-size: 1.5em;
   font-weight: 500;
+  color: #fff;
   max-width: 90%;
   text-align: left;
 }
@@ -56,15 +62,15 @@
 .hero-boton {
   font-size: 2em;
   font-weight: 500;
-  background-color: #304a6f;
-  color: #ffffff;
+  background-color: #fff3cd;
+  color: #000;
   padding: 0.5em;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 .hero-boton:hover {
-  background-color: #587aaa;
+  background-color: #f8f7f3;
 }
 
 .lang-switch {
@@ -80,11 +86,20 @@
   opacity: 1;
 }
 
-/* bootstrap navbar personalizada para paginas sin Hero ------------------- */
+/* bootstrap navbar personalizada ------------------- */
 .custom-navbar {
-  background-color: #e6edf3 !important; /* mismo color que footer */
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  background-color: white !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.custom-navbar a {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #8f8055 !important;
+  padding: 0.5rem;
+}
+.custom-navbar a:hover {
+  color: #1651a3 !important;
 }
 
 /****** fin header layout *****************************************/
@@ -116,8 +131,8 @@ a {
 /* contenedor principal del main */
 .contenedor-principal-main {
   max-width: 90%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .titulo-principal {
@@ -178,7 +193,7 @@ a {
 }
 
 .logo-mediano {
-  width: 3rem;
+  width: 2rem;
 }
 
 .logo-mini {
@@ -275,7 +290,16 @@ a {
 /****** fin main layout *****************************************/
 /****** footer layout *****************************************/
 footer {
-  background-color: #e6edf3;
+  background-color: #304a6f;
+}
+footer a {
+  font-size: 1.2em;
+  font-weight: 400;
+  color: #fff;
+  padding: 0.5rem;
+}
+footer a:hover {
+  color: #e7b11c;
 }
 
 .footer-enlaces {
@@ -290,8 +314,7 @@ footer {
 /* responsive tablet */
 @media (max-width: 768px) {
   .contenedor-hero {
-    /* elimino espacio superior, achico espacio a la izquierda, achico distancia entre elementos */
-    padding-top: 0rem;
+    /* achico espacio a la izquierda, achico distancia entre elementos */
     padding-left: 2rem;
     row-gap: 1em;
   }
@@ -299,11 +322,6 @@ footer {
     /* achico el font-size */
     font-size: 2.5em;
     font-weight: 800;
-  }
-  .hero-subtitulo {
-    /* achico el font-size respecto a desktop */
-    font-size: 1em;
-    font-weight: 500;
   }
   .hero-boton {
     /* achico el font-size */
@@ -324,24 +342,18 @@ footer {
     /* solo achivo el ancho */
     width: 20rem;
   }
+  /* bootstrap navbar personalizada achico font ------------------- */
+  .custom-navbar a {
+    font-size: 1.2em;
+    font-weight: 450;
+  }
 }
 /* responsive mobile */
 @media (max-width: 390px) {
-  .contenedor-hero {
-    /* elimino espacio superior, achico espacio a la izquierda, achico la distancia entre elementos */
-    padding-top: 0rem;
-    padding-left: 1rem;
-    row-gap: 0.5em;
-  }
   .hero-tituloSitio {
     /* achico el font-size*/
     font-size: 1.5em;
     font-weight: 800;
-  }
-  .hero-subtitulo {
-    /* achico el font-size respecto a desktop */
-    font-size: 1em;
-    font-weight: 500;
   }
   .hero-boton {
     /* achico el font-size */

@@ -1,5 +1,6 @@
 /****** main layout *****************************************/
 *{    
+    // background-color: $color-fondo-secundario;
     @extend %fontPrimaria;
     color: #000000 ;
     scroll-behavior: smooth;
@@ -9,7 +10,7 @@
 }
 
 // para menues header y footer
-ul{   
+ul{ 
     list-style: none;
     gap: 1rem;
     padding-left: 2rem;
@@ -27,8 +28,8 @@ a {
 /* contenedor principal del main */
 .contenedor-principal-main {
     max-width:90%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .titulo-principal {    
@@ -95,7 +96,7 @@ a {
 }
 
 .logo-mediano{
-    width: 3rem;
+    width: 2rem;
 }
 
 .logo-mini {

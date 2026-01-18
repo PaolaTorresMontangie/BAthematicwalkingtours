@@ -1,11 +1,29 @@
 // definición de variables con paleta de colores
 $color-primario: #e6edf3; // celeste
-$color-secundario: #304a6f; // zzul oscuro
+$color-secundario: #304a6f; // azul oscuro
+$color-terciario: #1651a3; // azul celeste
 $color-fondo-primario: #f8f7f3; // beige muy claro
 $color-fondo-secundario: #c2b2a3; // marron claro
 $color-fondo-intermedio: #e3ddcf; // beige intermedio
 $color-grisoscuro: #00000026;// gris oscuro casi negro;
 $color-texto-gris: #444; // gris intermedio
+
+// borrar o reorganizar
+$color-celeste: #e6edf3; // celeste
+$color-azulmarino: #304a6f; // azul oscuro
+$color-azulfrancia: #1651a3; // azul celeste
+$color-beigemuyclaro: #f8f7f3; // beige muy claro
+$color-marron: #c2b2a3; // marron claro
+$color-beigeintermedio: #e3ddcf; // beige intermedio
+$color-grisoscuro: #00000026;// gris oscuro casi negro;
+$color-grisintermedio: #444; // gris intermedio
+
+// colores stich
+$primary: #304a6f;  //azul marino
+$tan: #c2b2a3;      // color marron
+$background-light: #f8f7f3; //beige muy  claro
+$background-dark: #1a1e23;  //nuevo azul oscuro
+$neutral-border: #e0e0e0;   // nuevo clarito
 
 
 // dimensiones de dispositivos para diseño responsive

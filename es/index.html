@@ -49,99 +49,96 @@
 </head>
 
 <body>
-    <header class="index-header">   
-        <nav class="navbar navbar-light">
-            <!-- Contenedor principal -->
-            <div class="container-fluid d-flex align-items-center">
+    <header class="index-header">  
+        <div class="position-absolute w-100 h-100 contenedor-hero-fondoOscuro">            
+            <nav class="navbar navbar-light custom-navbar">
+                <div class="container-fluid d-flex align-items-center">
+                    
+                    <!-- IZQUIERDA: Logo + menú desktop -->
+                    <div class="d-flex align-items-center">
 
-                <!-- IZQUIERDA: Logo + menú desktop -->
-                <div class="d-flex align-items-center">
+                        <!-- LOGO: ocupa el espacio mínimo y siempre se ve -->
+                        <a class="navbar-brand mb-0" href="../es/index.html">
+                            <img class="logotipo" src="../img/logo.png" alt="Logotipo BA Thematic Walking Tours">
+                        </a>
 
-                    <!-- LOGO: ocupa el espacio mínimo y siempre se ve -->
-                    <a class="navbar-brand mb-0" href="../es/index.html">
-                        <img class="logotipo" src="../img/logo.png" alt="Logotipo BA Thematic Walking Tours">
-                    </a>
-
-                    <!-- MENÚ DESKTOP (≥768px) 
-                        - Se oculta en pantallas pequeñas (d-none)
-                        - Se vuelve visible a partir de 768px (d-md-flex)
-                        - flex-row → links horizontales
-                    -->
-                    <ul class="navbar-nav d-none d-md-flex flex-row gap-3 ms-3">
-                        <li class="nav-item"><a class="nav-link text-black" href="../es/index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="../es/index.html#tours">Tours</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="../es/pages/nosotros.html">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="../es/pages/contacto.html">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="../es/pages/faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-
-                <!-- SELECTOR DE IDIOMA (DESKTOP) -->
-                <div class="lang-switch d-none d-md-flex ms-auto me-3">
-                    <a href="../index.html" aria-label="English">
-                        <img class="logo-mediano" src="../img/united-states-flag-icon.webp" alt="English">
-                    </a>
-                    <a href="../es/index.html" aria-label="Español">
-                        <img class="logo-mediano" src="../img/spain-country-flag-icon.png" alt="Español">
-                    </a>
-                </div>
-
-                <!-- HAMBURGUESA:
-                    - Visible SOLO en móvil (d-md-none)
-                    - ms-auto → se va a la derecha
-                    - data-bs-toggle="offcanvas" → activa el menú lateral
-                -->                
-                <button class="navbar-toggler d-md-none ms-auto"
-                        type="button"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#menuRight"
-                        aria-controls="menuRight"
-                        aria-label="Abrir menu de navigacion principal">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- MENU OFFCANVAS (celular)                         
-                offcanvas → componente lateral oculto por defecto.
-                offcanvas-end → aparece desde la derecha.
-                offcanvas-header → título y botón de cerrar
-                offcanvas-body → contenido scrollable.                 
-                -->                
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="menuRight">
-                    <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-black">Menú</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar menú de navegación"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav">
+                        <!-- MENÚ DESKTOP (≥768px) 
+                            - Se oculta en pantallas pequeñas (d-none)
+                            - Se vuelve visible a partir de 768px (d-md-flex)
+                            - flex-row → links horizontales
+                        -->
+                        <ul class="navbar-nav d-none d-md-flex flex-row gap-3 ms-3">
                             <li class="nav-item"><a class="nav-link text-black" href="../es/index.html">Inicio</a></li>
                             <li class="nav-item"><a class="nav-link text-black" href="../es/index.html#tours">Tours</a></li>
                             <li class="nav-item"><a class="nav-link text-black" href="../es/pages/nosotros.html">Nosotros</a></li>
                             <li class="nav-item"><a class="nav-link text-black" href="../es/pages/contacto.html">Contacto</a></li>
                             <li class="nav-item"><a class="nav-link text-black" href="../es/pages/faq.html">FAQ</a></li>
-
-                            <!-- Selector idioma mobile -->
-                            <li class="nav-item mt-3">
-                                <a href="../index.html" aria-label="English">
-                                    <img class="logo-mini" src="../img/united-states-flag-icon.webp" alt="English">
-                                </a>
-                                <a href="../es/index.html" aria-label="Español">
-                                    <img class="logo-mini" src="../img/spain-country-flag-icon.png" alt="Español">
-                                </a>                                
-                            </li>
                         </ul>
                     </div>
+
+                    <!-- SELECTOR DE IDIOMA (DESKTOP) -->
+                    <div class="lang-switch d-none d-md-flex ms-auto me-3">
+                        <a href="../index.html" aria-label="English">
+                            <img class="logo-mediano" src="../img/united-states-flag-icon.webp" alt="English">
+                        </a>
+                        <a href="../es/index.html" aria-label="Español">
+                            <img class="logo-mediano" src="../img/spain-country-flag-icon.png" alt="Español">
+                        </a>
+                    </div>
+
+                    <!-- HAMBURGUESA:
+                        - Visible SOLO en móvil (d-md-none)
+                        - ms-auto → se va a la derecha
+                        - data-bs-toggle="offcanvas" → activa el menú lateral
+                    -->                
+                    <button class="navbar-toggler d-md-none ms-auto"
+                            type="button"
+                            data-bs-toggle="offcanvas"
+                            data-bs-target="#menuRight"
+                            aria-controls="menuRight"
+                            aria-label="Abrir menu de navigacion principal">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- MENU OFFCANVAS (celular)                         
+                    offcanvas → componente lateral oculto por defecto.
+                    offcanvas-end → aparece desde la derecha.
+                    offcanvas-header → título y botón de cerrar
+                    offcanvas-body → contenido scrollable.                 
+                    -->                
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="menuRight">
+                        <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-black">Menú</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar menú de navegación"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav">
+                                <li class="nav-item"><a class="nav-link text-black" href="../es/index.html">Inicio</a></li>
+                                <li class="nav-item"><a class="nav-link text-black" href="../es/index.html#tours">Tours</a></li>
+                                <li class="nav-item"><a class="nav-link text-black" href="../es/pages/nosotros.html">Nosotros</a></li>
+                                <li class="nav-item"><a class="nav-link text-black" href="../es/pages/contacto.html">Contacto</a></li>
+                                <li class="nav-item"><a class="nav-link text-black" href="../es/pages/faq.html">FAQ</a></li>
+
+                                <!-- Selector idioma mobile -->
+                                <li class="nav-item mt-3">
+                                    <a href="../index.html" aria-label="English">
+                                        <img class="logo-mini" src="../img/united-states-flag-icon.webp" alt="English">
+                                    </a>
+                                    <a href="../es/index.html" aria-label="Español">
+                                        <img class="logo-mini" src="../img/spain-country-flag-icon.png" alt="Español">
+                                    </a>                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
-        
-        <section class="contenedor-hero">            
-            <h1 class="hero-tituloSitio">Tours guiados temáticos en Buenos Aires</h1>  
-            <h2 class="hero-subtitulo">
-                Recorridos temáticos a pie en inglés guiados por una experta local:</br>
-                Descubrí el alma oculta de Buenos Aires, explorá la ciudad más allá del tango y el asado.
-            </h2>
-            <a class="hero-boton" href="#tours">Explorar Tours</a>        
-        </section>
+            </nav>
+            
+            <section class="contenedor-hero">            
+                <h1 class="hero-tituloSitio">Tours guiados temáticos en Buenos Aires</h1>
+                <a class="hero-boton" href="#tours">Explorar Tours</a>        
+            </section>
+        </div> <!-- div fondo oscuro -->            
     </header> 
     
     <main class="container contenedor-principal-main" id="tours">

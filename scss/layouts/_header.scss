@@ -4,14 +4,14 @@
     background-image: url("../img/headerBackground.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    height: 100vh;
+    height: 95vh;
+    position: relative;
 }
 
 .logotipo {
-    width: 8rem;   
+    width: 5rem;   
     max-width: 100%;     
-    min-width: 6rem;
+    min-width: 3rem;
     height: auto;
 }
 
@@ -23,21 +23,27 @@
     align-items: flex-start;        
     height: 80%;
     max-height: 80%;
-    padding-top: 2rem;
+    padding-top: 3rem;
     @include paddingGap(5rem,3em);
+}
+
+.contenedor-hero-fondoOscuro {
+    background-color: rgba(0, 0, 0, 0.2); /* Fondo negro semitransparente */
 }
 
 /* titulo principal del sitio */
 .hero-tituloSitio {    
     @extend %fontSecundaria;
-    @include tipografiaTamanio(4em,800);
+    @include tipografiaTamanio(5.5em,800);
+    color: #fff;
     width: 90%;
     max-width: 80%;
-    text-align: left;       
+    text-align: left; 
 }
 
 .hero-subtitulo {
     @include tipografiaTamanio (1.5em, 500);
+    color: #fff;    
     max-width: 90%;    
     text-align: left;       
 }
@@ -45,26 +51,27 @@
 .hero-boton {
     @extend %fontSecundaria;
     @include tipografiaTamanio(2em,500); 
-    background-color: $color-secundario;
-    color: #ffffff;     
+    //background-color: #c8daf3;
+    background-color: #fff3cd;
+    color: #000;
     padding: 0.5em;
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease; 
 
     &:hover {
-        background-color: #587aaa; 
+        background-color:#f8f7f3; 
     }
 }
 
 .lang-switch {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 
     img {
-    cursor: pointer;
-    opacity: 0.85;  
+        cursor: pointer;
+        opacity: 0.85;  
     }
 
     img:hover {
@@ -72,11 +79,24 @@
     }
 }
 
-/* bootstrap navbar personalizada para paginas sin Hero ------------------- */
+/* bootstrap navbar personalizada ------------------- */
 .custom-navbar {
-    background-color: $color-primario !important; /* mismo color que footer */    
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    background-color: white !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;     
+
+    a {
+        @extend %fontSecundaria;
+        @include tipografiaTamanio(1.5em,600);
+        color:#8f8055 !important;        
+        //color: #1651a3 !important;
+        padding: 0.5rem;
+
+        &:hover {
+            //color: #a49976 !important;
+            color: #1651a3 !important;
+        }
+    }    
 }
 
 /****** fin header layout *****************************************/
