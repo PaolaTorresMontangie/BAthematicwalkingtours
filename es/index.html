@@ -164,8 +164,39 @@
         </p>
     </footer>        
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>   
-    
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>   
+
+    <!-- script para ancla Tours -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const section = document.getElementById("tours");
+        const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+
+        if (!section) return;
+
+        const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                link.removeAttribute("aria-current");
+                if (link.getAttribute("href").includes("#tours")) {
+                    link.setAttribute("aria-current", "page");
+                }
+                });
+            }
+            });
+        },
+        {
+            threshold: 0.4
+        }
+        );
+
+        observer.observe(section);
+    });
+    </script>
+
 </body>
 </html>
 

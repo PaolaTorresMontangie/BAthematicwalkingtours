@@ -498,6 +498,20 @@ a {
     background-color: rgba(0, 0, 0, 0.13);
     backdrop-filter: blur(6px);
   }
+  /* footer achicar padding */
+  .site-footer {
+    padding: 2rem 0 0;
+  }
+  /* footer vertical y achicar letras espacios */
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer-links a {
+    font-weight: 300;
+  }
 }
 /* responsive mobile */
 @media (max-width: 390px) {

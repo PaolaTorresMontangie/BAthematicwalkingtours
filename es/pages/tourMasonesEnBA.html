@@ -52,69 +52,44 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-light custom-navbar">
-            <div class="container-fluid d-flex align-items-center">
-                <div class="d-flex align-items-center">
-                    <a class="navbar-brand mb-0" href="../../es/index.html">
-                        <img class="logotipo" src="../../img/logo.png" alt="Logotipo BA thematic walking tours">
-                    </a>
 
-                    <ul class="navbar-nav d-none d-md-flex flex-row gap-3 ms-3">
-                        <li class="nav-item"><a class="nav-link text-black" href="../../es/index.html">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="../../es/index.html#tours">Tours</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="../../es/pages/nosotros.html">Nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="../../es/pages/contacto.html">Contacto</a></li>
-                        <li class="nav-item"><a class="nav-link text-black" href="../../es/pages/faq.html">FAQ</a></li>
-                    </ul>
-                </div>
+        <!-- Barra navegacion pegada arriba y ocupando todo el ancho -->
+        <nav class="navbar navbar-expand-lg position-fixed w-100 z-1 custom-navbar">
 
-                <!-- SELECTOR DE IDIOMA (DESKTOP) -->
-                <div class="lang-switch d-none d-md-flex ms-auto me-3">
-                    <a href="../../pages/tourMasonesEnBA.html" aria-label="English">
-                        <img class="logo-mini" src="../../img/united-states-flag-icon.webp" alt="English">
-                    </a>
-                    <a href="../../es/pages/tourMasonesEnBA.html" aria-label="Español">
-                        <img class="logo-mini" src="../img/spain-flag-icon.png" alt="Español">
-                    </a>                    
-                </div>                
+            <div class="container-fluid">
 
-                <button class="navbar-toggler d-md-none ms-auto"
-                        type="button"
-                        data-bs-toggle="offcanvas"
-                        data-bs-target="#menuRight"
-                        aria-controls="menuRight"
-                        aria-label="Abrir menu de navigacion principal">
-                    <span class="navbar-toggler-icon"></span>
+                <a class="navbar-brand mb-0" href="../index.html">
+                    <img class="logotipo" src="../../img/logo.png" alt="Logotipo BA thematic walking tours">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
                 </button>
+                
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0">
 
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="menuRight">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title">Menú</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar menú de navegación"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link text-black" href="../../es/index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="../../es/index.html#tours">Tours</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="../../es/pages/nosotros.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="../../es/pages/contacto.html">Contacto</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="../../es/pages/faq.html">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="../../es/index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" aria-current="page" href="../../es/index.html#tours">Tours</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="../../es/pages/nosotros.html">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="../../es/pages/contacto.html">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link fw-medium" href="../../es/pages/faq.html">FAQ</a></li>  
 
-                            <!-- Selector idioma mobile -->
-                            <li class="nav-item mt-3">
-                                <a href="../../pages/tourMasonesEnBA.html" aria-label="English">
-                                    <img class="logo-mini" src="../../img/united-states-flag-icon.webp" alt="English">
-                                </a>                                
-                                <a href="../../es/pages/tourMasonesEnBA.html" aria-label="Español">
-                                    <img class="logo-mini" src="../../img/spain-flag-icon.png" alt="Español">
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
+                        <!-- Selector idioma  -->
+                        <li class="nav-item">
+                            <a href="../../pages/tourMasonesEnBA.html" aria-label="English">
+                                <img class="logo-mini" src="../../img/united-states-flag-icon.webp" alt="English">
+                            </a>
+                            <a href="../../es/pages/tourMasonesEnBA.html" aria-label="Español">
+                                <img class="logo-mini" src="../../img/spain-flag-icon.png" alt="Español">
+                            </a>
+                        </li>
+                        
+                    </ul>
                 </div>
             </div>
         </nav>
+
     </header>
 
     <main class="container contenedor-principal-main">
@@ -159,7 +134,7 @@
         <div class="container footer-content">
             <ul class="footer-links">
             <li><a href="../../es/index.html">Inicio</a></li>
-            <li><a href="../../es/index.html#tours">Tours</a></li>
+            <li><a aria-current="page" href="../../es/index.html#tours">Tours</a></li>
             <li><a href="../../es/pages/nosotros.html">Nosotros</a></li>
             <li><a href="../../es/pages/contacto.html">Contacto</a></li>
             <li><a href="../../es/pages/faq.html">FAQ</a></li>
