@@ -1,16 +1,57 @@
 @charset "UTF-8";
-* {
-  font-family: "Varela Round", "Montserrat", sans-serif;
-}
-
-footer a, .titulo-secundario, .titulo-principal, .custom-navbar a, .hero-boton, .hero-tituloSitio, .contenedor-hero {
+.contenedor-hero {
   font-family: "Montserrat", sans-serif;
 }
 
 /****** header layout *****************************************/
+/* RESET Y GENERALES ********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4eee6;
+  color: #1f2a36;
+  scroll-behavior: smooth;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.015em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* titulos */
+h1, h2, h3 {
+  font-family: "Lora", serif;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+h1 {
+  font-size: 2.6rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: #1f2a36;
+}
+
 /* header con imagen de fondo */
 .index-header {
-  background-image: url("../img/headerBackground.jpg");
+  background-image: url("../img/backgroundObelisco.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 95vh;
@@ -18,7 +59,7 @@ footer a, .titulo-secundario, .titulo-principal, .custom-navbar a, .hero-boton, 
 }
 
 .logotipo {
-  width: 5rem;
+  width: 15rem;
   max-width: 100%;
   min-width: 3rem;
   height: auto;
@@ -35,42 +76,35 @@ footer a, .titulo-secundario, .titulo-principal, .custom-navbar a, .hero-boton, 
   padding-top: 3rem;
   padding-left: 5rem;
   row-gap: 3em;
+  /* espacio para navbar fija */
+  margin-top: 100px;
 }
 
 .contenedor-hero-fondoOscuro {
-  background-color: rgba(0, 0, 0, 0.2); /* Fondo negro semitransparente */
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo negro semitransparente */
 }
 
-/* titulo principal del sitio */
 .hero-tituloSitio {
-  font-size: 5.5em;
-  font-weight: 800;
+  width: 50%;
   color: #fff;
-  width: 90%;
-  max-width: 80%;
-  text-align: left;
+  font-family: "Lora", serif;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  font-size: 2.6rem;
+  line-height: 1.2;
 }
 
 .hero-subtitulo {
-  font-size: 1.5em;
-  font-weight: 500;
+  width: 50%;
   color: #fff;
-  max-width: 90%;
-  text-align: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin-bottom: 2rem;
 }
 
-.hero-boton {
-  font-size: 2em;
-  font-weight: 500;
-  background-color: #fff3cd;
-  color: #000;
-  padding: 0.5em;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.hero-boton:hover {
-  background-color: #f8f7f3;
+.hero h1 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
 }
 
 .lang-switch {
@@ -86,110 +120,98 @@ footer a, .titulo-secundario, .titulo-principal, .custom-navbar a, .hero-boton, 
   opacity: 1;
 }
 
-/* bootstrap navbar personalizada ------------------- */
+/* bootstrap navbar personalizada color idem footer */
 .custom-navbar {
-  background-color: white !important;
+  background-color: #304a6f !important;
+  align-items: flex-end;
+  text-align: right;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
+  /* ===== NAVBAR: LINK ACTIVO ===== */
+}
+.custom-navbar .nav-link[aria-current=page] {
+  color: #b8a77a !important;
 }
 .custom-navbar a {
-  font-size: 1.5em;
-  font-weight: 600;
-  color: #8f8055 !important;
+  font-weight: 500;
+  color: #fff !important;
   padding: 0.5rem;
 }
 .custom-navbar a:hover {
-  color: #1651a3 !important;
+  color: #fdfaf3;
+  text-decoration: none;
+  text-shadow: 0 0 5px #b8a77a;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+/* pone las rayitas del menu hamburguesa en blanco */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ===== NAVBAR DESKTOP: LINKS A LA DERECHA ===== */
+.navbar-nav {
+  margin-left: auto;
+}
+
+/* ===== BANDERITAS DE IDIOMA ===== */
+.navbar-nav .nav-item:last-child {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  margin-left: 1.2rem; /* pequeño respiro respecto a FAQ */
+}
+
+.navbar-nav .nav-item:last-child img {
+  height: 20px;
+  width: auto;
 }
 
 /****** fin header layout *****************************************/
 /****** main layout *****************************************/
-* {
-  color: #000000;
-  scroll-behavior: smooth;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-ul {
-  list-style: none;
-  gap: 1rem;
-  padding-left: 2rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-left: 1rem;
-  row-gap: 2rem;
-}
-
-a {
+/* botones */
+.btn-primary {
+  display: inline-block;
+  background-color: #4b3422;
+  color: #fdfaf3;
+  text-shadow: 2px 2px 2px #333333;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
   text-decoration: none;
-  color: #000000;
+  border: 2px solid #b8a77a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-primary:hover {
+  background-color: #614530;
+  /* text-shadow: 0 0 5px #ffffff; efecto glow   */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-/* contenedor principal del main */
+.btn-secondary {
+  display: inline-block;
+  background-color: #a68458;
+  color: #fdfaf3;
+  text-shadow: 2px 2px 2px #333333;
+  padding: 0.6rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid #b8a77a;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-secondary:hover {
+  background-color: #bb986b;
+  /* text-shadow: 0 0 5px #ffffff; efecto glow   */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
 .contenedor-principal-main {
-  max-width: 90%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.titulo-principal {
-  font-size: 2.5em;
-  font-weight: 750;
-  width: 80%;
-}
-
-.titulo-secundario {
-  font-size: 1.8em;
-  font-weight: 200;
-  width: 80%;
-}
-
-.grid-tours-card {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.tours-card {
-  background-color: #f8f7f3;
-  border-radius: 0.5rem;
-  width: 24rem;
-  height: auto;
-}
-
-.tours-card-flex {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 0.5rem;
-  align-items: center;
-}
-.tours-card-flex h3 {
-  text-align: center;
-}
-
-.tours-card-boton, .contacto-boton {
-  background-color: #c2b2a3;
-  font-size: 1rem;
-  font-weight: 400;
-  border: none;
-  padding: 0.6rem 2rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.tours-card-boton:hover, .contacto-boton:hover {
-  background-color: #e4d4c5;
-  /* background-color: #587aaa; */
-}
-.tours-card-boton:focus, .contacto-boton:focus {
-  outline: 3px solid #587aaa;
-  outline-offset: 2px;
+  padding-top: 8rem;
+  padding-bottom: 2.5rem;
 }
 
 .logo-mediano {
@@ -202,23 +224,115 @@ a {
   margin: 0;
 }
 
-/* bootstrap acordeon personalizado ------------------- */
+/* titulo con lineas degrade */
+.titulo-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Lora", serif;
+  font-weight: 400;
+  font-size: 2.2em;
+  letter-spacing: 0.03em;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+  color: #1f2a36;
+  /* Línea izquierda */
+}
+.titulo-principal::before {
+  content: "";
+  width: 10rem;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #b8a77a);
+}
+.titulo-principal {
+  /* Línea derecha */
+}
+.titulo-principal::after {
+  content: "";
+  width: 10rem;
+  height: 2px;
+  background: linear-gradient(to left, transparent, #b8a77a);
+}
+
+.titulo-secundario {
+  font-family: "Lora", serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+/* cards ---------------------------------------------------------------------*/
+.grilla-main-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.tour-card {
+  background-color: #fdfaf3;
+  border-radius: 20px;
+  padding-bottom: 0rem;
+  text-align: center;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+.tour-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border-radius: 0;
+}
+.tour-card h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.6rem;
+}
+.tour-card p {
+  margin: 1rem;
+}
+
+.card-image {
+  position: relative;
+  overflow: hidden;
+  /* borde redondondeado solo arriba */
+  border-radius: 20px 20px 0 0;
+  /* degrade */
+}
+.card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(253, 250, 243, 0) 55%, rgb(253, 250, 243) 100%);
+  pointer-events: none;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 1.6rem 1.6rem;
+}
+
+/* bootstrap acordeon personalizado --------------------------------------- */
 .section-faq {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0.5rem 1rem;
 }
 .section-faq .accordion-item {
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1490196078);
+  border-bottom: 1px solid #b8a77a;
 }
 .section-faq .accordion-button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   background-color: transparent;
   padding: 1.2rem 0;
 }
 .section-faq .accordion-button:not(.collapsed) {
-  color: #000;
   background-color: transparent;
   box-shadow: none;
 }
@@ -228,7 +342,6 @@ a {
 }
 .section-faq .accordion-body {
   padding: 0.5rem 0 1.2rem;
-  color: #444;
 }
 
 /* grid para imagenes de tours ---------------------------------------------------- */
@@ -276,6 +389,7 @@ a {
   object-fit: cover;
 }
 
+/* paginas detalle de tours */
 .contenedor-texto-tours {
   display: flex;
   flex-direction: column;
@@ -289,24 +403,53 @@ a {
 /* fin paginas tours */
 /****** fin main layout *****************************************/
 /****** footer layout *****************************************/
-footer {
+.site-footer {
   background-color: #304a6f;
-}
-footer a {
-  font-size: 1.2em;
-  font-weight: 400;
-  color: #fff;
-  padding: 0.5rem;
-}
-footer a:hover {
-  color: #e7b11c;
+  color: #fdfaf3;
+  padding: 2.5rem 0 1.2rem;
+  /* borde dorado */
+  border-top: 3px solid #b8a77a;
 }
 
-.footer-enlaces {
+.footer-content {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  padding: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+}
+.footer-links a:hover {
+  color: #fdfaf3;
+  text-decoration: none;
+  text-shadow: 0 0 5px #b8a77a;
+}
+.footer-links a {
+  /* ===== FOOTER: LINK ACTIVO ===== */
+}
+.footer-links a[aria-current=page] {
+  color: #b8a77a;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.linea-dorada {
+  height: 2px; /* Grosor */
+  width: 100%; /* Ancho */
+  background-color: #b8a77a; /* Color de la línea */
+  margin: 20px auto; /* Márgenes superior/inferior y centrado */
+  border: none; /* Elimina estilos de navegador por defecto */
 }
 
 /****** fin footer layout *****************************************/
@@ -331,21 +474,29 @@ footer a:hover {
   .titulo-principal {
     /* achico el font-size */
     font-size: 2em;
-    font-weight: 750;
+    font-weight: 500;
   }
   .titulo-secundario {
     /* achico el font-size */
-    font-size: 1.5em;
-    font-weight: 200;
+    font-size: 1.2em;
+    font-weight: 500;
   }
   .tours-card {
     /* solo achivo el ancho */
     width: 20rem;
   }
-  /* bootstrap navbar personalizada achico font ------------------- */
+  /* bootstrap navbar personalizada ------------------- */
   .custom-navbar a {
     font-size: 1.2em;
     font-weight: 450;
+  }
+  /* ===== BANDERAS A LA DERECHA EN MOBILE ===== */
+  .navbar-nav .nav-item:last-child {
+    margin-left: auto;
+  }
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.13);
+    backdrop-filter: blur(6px);
   }
 }
 /* responsive mobile */
@@ -363,12 +514,12 @@ footer a:hover {
   .titulo-principal {
     /* solo achico el font-size*/
     font-size: 1.5em;
-    font-weight: 750;
+    font-weight: 500;
   }
   .titulo-secundario {
-    /* solo achico el font-size */
+    /* slo achico el font-size */
     font-size: 1em;
-    font-weight: 200;
+    font-weight: 500;
   }
   .tours-card {
     /* solo achivo el ancho */

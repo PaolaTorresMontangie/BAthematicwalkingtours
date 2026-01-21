@@ -40,7 +40,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">    
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> 
 
@@ -50,164 +52,117 @@
 
 <body>
     <header class="index-header">  
-        <div class="position-absolute w-100 h-100 contenedor-hero-fondoOscuro">            
-            <nav class="navbar navbar-light custom-navbar">
-                <div class="container-fluid d-flex align-items-center">
+        <div class="position-absolute w-100 h-100 contenedor-hero-fondoOscuro">    
+            
+            <!-- Barra navegacion pegada arriba y ocupando todo el ancho -->
+            <nav class="navbar navbar-expand-lg position-fixed w-100 z-1 custom-navbar">
+
+                <div class="container-fluid">
+
+                    <a class="navbar-brand mb-0" href="./index.html">
+                        <img class="logotipo" src="../img/logo.png" alt="Logotipo BA thematic walking tours">
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
                     
-                    <!-- IZQUIERDA: Logo + menú desktop -->
-                    <div class="d-flex align-items-center">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link fw-medium" aria-current="page" href="../es/index.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link fw-medium" href="../es/index.html#tours">Tours</a></li>
+                            <li class="nav-item"><a class="nav-link fw-medium" href="../es/pages/nosotros.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link fw-medium" href="../es/pages/contacto.html">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link fw-medium" href="../es/pages/faq.html">FAQ</a></li>                            
 
-                        <!-- LOGO: ocupa el espacio mínimo y siempre se ve -->
-                        <a class="navbar-brand mb-0" href="../es/index.html">
-                            <img class="logotipo" src="../img/logo.png" alt="Logotipo BA Thematic Walking Tours">
-                        </a>
-
-                        <!-- MENÚ DESKTOP (≥768px) 
-                            - Se oculta en pantallas pequeñas (d-none)
-                            - Se vuelve visible a partir de 768px (d-md-flex)
-                            - flex-row → links horizontales
-                        -->
-                        <ul class="navbar-nav d-none d-md-flex flex-row gap-3 ms-3">
-                            <li class="nav-item"><a class="nav-link text-black" href="../es/index.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="../es/index.html#tours">Tours</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="../es/pages/nosotros.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="../es/pages/contacto.html">Contacto</a></li>
-                            <li class="nav-item"><a class="nav-link text-black" href="../es/pages/faq.html">FAQ</a></li>
+                            <!-- Selector idioma  -->
+                            <li class="nav-item">
+                                <a href="../index.html" aria-label="English">
+                                    <img class="logo-mini" src="../img/united-states-flag-icon.webp" alt="English">
+                                </a>
+                                <a href="../es/index.html" aria-label="Español">
+                                    <img class="logo-mini" src="../img/spain-flag-icon.png" alt="Español">
+                                </a>                                
+                            </li>                          
+                            
                         </ul>
                     </div>
-
-                    <!-- SELECTOR DE IDIOMA (DESKTOP) -->
-                    <div class="lang-switch d-none d-md-flex ms-auto me-3">
-                        <a href="../index.html" aria-label="English">
-                            <img class="logo-mediano" src="../img/united-states-flag-icon.webp" alt="English">
-                        </a>
-                        <a href="../es/index.html" aria-label="Español">
-                            <img class="logo-mediano" src="../img/spain-country-flag-icon.png" alt="Español">
-                        </a>
-                    </div>
-
-                    <!-- HAMBURGUESA:
-                        - Visible SOLO en móvil (d-md-none)
-                        - ms-auto → se va a la derecha
-                        - data-bs-toggle="offcanvas" → activa el menú lateral
-                    -->                
-                    <button class="navbar-toggler d-md-none ms-auto"
-                            type="button"
-                            data-bs-toggle="offcanvas"
-                            data-bs-target="#menuRight"
-                            aria-controls="menuRight"
-                            aria-label="Abrir menu de navigacion principal">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <!-- MENU OFFCANVAS (celular)                         
-                    offcanvas → componente lateral oculto por defecto.
-                    offcanvas-end → aparece desde la derecha.
-                    offcanvas-header → título y botón de cerrar
-                    offcanvas-body → contenido scrollable.                 
-                    -->                
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="menuRight">
-                        <div class="offcanvas-header">
-                        <h5 class="offcanvas-title text-black">Menú</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar menú de navegación"></button>
-                        </div>
-                        <div class="offcanvas-body">
-                            <ul class="navbar-nav">
-                                <li class="nav-item"><a class="nav-link text-black" href="../es/index.html">Inicio</a></li>
-                                <li class="nav-item"><a class="nav-link text-black" href="../es/index.html#tours">Tours</a></li>
-                                <li class="nav-item"><a class="nav-link text-black" href="../es/pages/nosotros.html">Nosotros</a></li>
-                                <li class="nav-item"><a class="nav-link text-black" href="../es/pages/contacto.html">Contacto</a></li>
-                                <li class="nav-item"><a class="nav-link text-black" href="../es/pages/faq.html">FAQ</a></li>
-
-                                <!-- Selector idioma mobile -->
-                                <li class="nav-item mt-3">
-                                    <a href="../index.html" aria-label="English">
-                                        <img class="logo-mini" src="../img/united-states-flag-icon.webp" alt="English">
-                                    </a>
-                                    <a href="../es/index.html" aria-label="Español">
-                                        <img class="logo-mini" src="../img/spain-country-flag-icon.png" alt="Español">
-                                    </a>                                
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                
                 </div>
             </nav>
             
             <section class="contenedor-hero">            
-                <h1 class="hero-tituloSitio">Tours guiados temáticos en Buenos Aires</h1>
-                <a class="hero-boton" href="#tours">Explorar Tours</a>        
+            <h1 class="hero-tituloSitio">Tours guiados temáticos en Buenos Aires</h1>
+                <p class="hero-subtitulo">
+                Explora la Historia Oculta de Buenos Aires. Únete a nuestros recorridos a pie temáticos para descubrir los secretos, la arquitectura y los misterios de la ciudad
+                </p>                    
+                <a class="btn-primary" href="#tours">Explorar Tours</a>        
             </section>
         </div> <!-- div fondo oscuro -->            
     </header> 
     
-    <main class="container contenedor-principal-main" id="tours">
+    <main class="contenedor-principal-main" id="tours">
+        <div class="container">
 
-        <!-- Títulos -->
-        <div class="mb-4">
-            <h2 class="titulo-principal">Nuestros tours</h2>            
-            <h3 class="titulo-secundario">Donde la historia se encuentra con el misterio</h3>
+            <h2 class="titulo-principal">Nuestros tours temáticos</h2>
+            <h2 class="titulo-secundario mb-4">Donde la historia se encuentra con el misterio</h2>
 
-            <p class="mt-2">No todos los secretos de Buenos Aires están enterrados: algunos esperan ser revelados. <br>
-            Descubre el lado más enigmático de la ciudad a través de experiencias guiadas en inglés que entrelazan historia, arte y masonería. <br>
-            De la mano de Luz, guía temática y narradora, cada recorrido revela símbolos ocultos y huellas masónicas que ayudaron a dar forma al pasado de Argentina.</p>
-        </div>        
+            <div class="grilla-main-cards">
 
-        <!-- comienzo div con cards -->
-        <div class="grid-tours-card"> 
-            
-            <article class="tours-card">     
-                <a href="../es/pages/tourCementerioRecoleta.html">
-                    <div>       
-                        <img class="img-fluid rounded" src="../img/cementerioRecoleta.jpg" alt="Cementerio de la Recoleta in Buenos Aires">
+                <article class="tour-card">
+                    <div class="card-image">
+                        <img src="../img/ImageCardRecoletav2.png" alt="Cementerio de Recoleta">
                     </div>
-
-                    <div class="tours-card-flex">
-                        <h3>Tour Masónico de la Recoleta</h3>
-                         <button class="tours-card-boton">Reservar</button>                        
+                    <div class="card-content">
+                        <h3>Historia oculta de Buenos Aires</h3>
+                        <p>Descubre los fascinantes secretos y las historias olvidadas de la ciudad.</p>
+                        <a href="../es/pages/tourCementerioRecoleta.html" class="btn-secondary">Learn More</a>
                     </div>
-                </a>
-            </article>
+                </article>
 
-            <article class="tours-card">     
-                <a href="../es/pages/tourMasonesEnBA.html">
-                    <div>       
-                        <img class="img-fluid rounded" src="../img/masonesEnBa.jpg" alt="Palacio Masónico de Buenos Aires">
-                    </div>                    
-
-                    <div class="tours-card-flex">
-                        <h3>Tour Masónico por Buenos Aires</h3>                                                                
-                        
-                        <button class="tours-card-boton">Reservar</button>                                                            
+                <article class="tour-card">
+                    <div class="card-image">                    
+                        <img src="../img/ImageCardMasonesv2.png" alt="Congreso Nacional">
                     </div>
-                </a> 
-            </article>
-
-            <article class="tours-card">
-                <a href="../es/pages/tourPalacioBarolo.html">                   
-                    <div>       
-                        <img class="img-fluid rounded" src="../img/palacioBarolo.jpg" alt="Palacio Barolo en Buenos Aires">
+                    <div class="card-content">
+                        <h3>Arquitectura y Poder</h3>
+                        <p>Explora los majestuosos edificios y las leyendas que forjaron Buenos Aires.</p>
+                        <a href="../es/pages/tourMasonesEnBA.html" class="btn-secondary">Learn More</a>
                     </div>
+                </article>
 
-                    <div class="tours-card-flex">
-                        <h3>Tour Masónico Palacio Barolo</h3>
-                        
-                        <button class="tours-card-boton">Reservar</button>
+                <article class="tour-card">
+                    <div class="card-image">                     
+                        <img src="../img/ImageCardBarolov2.png" alt="Palacio Barolo">
                     </div>
-                </a>
-            </article>
-        </div>
-    </main>
+                    <div class="card-content">                    
+                        <h3>Símbolos y secretos masónicos</h3>
+                        <p>Sumérgete en el misterioso mundo de los símbolos masónicos y sus significados ocultos.</p>
+                        <a href="../es/pages/tourPalacioBarolo.html" class="btn-secondary">Learn More</a>
+                    </div>
+                </article>
+
+            </div>
+        </div> <!-- fin container -->      
+    </main>    
     
-    <footer>        
-        <ul class="footer-enlaces">
-            <li><a href="../es/index.html">Inicio</a></li>
-            <li><a href="../es/index.html#tours">Tours</a></li>
-            <li><a href="../es/pages/nosotros.html">Nosotros</a></li>
-            <li><a href="../es/pages/contacto.html">Contacto</a></li>
-            <li><a href="..//es/pages/faq.html">FAQ</a></li>              
-        </ul>
-    </footer>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <ul class="footer-links">
+                <li><a aria-current="page" href="../es/index.html">Inicio</a></li>
+                <li><a href="../es/index.html#tours">Tours</a></li>
+                <li><a href="../es/pages/nosotros.html">Nosotros</a></li>
+                <li><a href="../es/pages/contacto.html">Contacto</a></li>
+                <li><a href="..//es/pages/faq.html">FAQ</a></li>
+            </ul>
+        </div>
+
+        <hr class="linea-dorada">
+
+        <p class="footer-copy">
+            © 2026 BA Thematic Walking Tours. Todos los derechos reservados.
+        </p>
+    </footer>        
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>   
     

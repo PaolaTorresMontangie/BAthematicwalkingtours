@@ -1,23 +1,57 @@
 /****** footer layout *****************************************/
-footer{ 
-    background-color: $color-azulmarino;
+.site-footer {
+    background-color: #304a6f; //rgb(48,74,111)
+    color: #fdfaf3;
+    padding: 2.5rem 0 1.2rem;
+    /* borde dorado */
+    border-top: 3px solid #b8a77a;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 
     a {
-        @extend %fontSecundaria;
-        @include tipografiaTamanio(1.2em,400);
-        // text-transform: uppercase;
-        color: #fff;
-        padding: 0.5rem;
+        color: #fff;       
+        text-decoration: none;
+        font-weight: 400;
 
         &:hover {
-            color:#e7b11c;        
+            color: #fdfaf3;
+            text-decoration: none;
+            // efecto glow
+            text-shadow: 0 0 5px #b8a77a;
         }
+
+        /* ===== FOOTER: LINK ACTIVO ===== */
+        &[aria-current="page"] {
+            color: #b8a77a;
+        }    
     }
 }
 
-.footer-enlaces{
-    @include flexRowCenter;
-    padding: 1rem;
+
+
+
+
+.footer-copy {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: 1.2rem;
+}
+
+.linea-dorada {
+    height: 2px; /* Grosor */
+    width: 100%; /* Ancho */
+    background-color: #b8a77a; /* Color de la línea */
+    margin: 20px auto; /* Márgenes superior/inferior y centrado */
+    border: none; /* Elimina estilos de navegador por defecto */
 }
 
 /****** fin footer layout *****************************************/

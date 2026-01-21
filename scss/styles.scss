@@ -11,6 +11,12 @@
 
 /* responsive tablet */
 @media (max-width: $tamanioTablet) {
+
+    // /* Compensar navbar fija */
+    // main {
+    //     padding-top: 110px;
+    // }
+
     .contenedor-hero {  
         /* achico espacio a la izquierda, achico distancia entre elementos */        
         @include paddingGap(2rem,1em);
@@ -28,12 +34,12 @@
    
     .titulo-principal {
         /* achico el font-size */
-        @include tipografiaTamanio(2em,750);   
+        @include tipografiaTamanio(2em,500);   
     }
    
     .titulo-secundario {
-        /* achico el font-size */
-        @include tipografiaTamanio(1.5em,200);
+         /* achico el font-size */
+         @include tipografiaTamanio(1.2em,500);
     }
 
     .tours-card {
@@ -41,10 +47,26 @@
         width: 20rem;           
     }
 
-    /* bootstrap navbar personalizada achico font ------------------- */
+    /* bootstrap navbar personalizada ------------------- */
     .custom-navbar a {
         @include tipografiaTamanio(1.2em,450);
     }
+
+    // .navbar-nav {
+    // margin-left: auto;
+    // }  
+
+    /* ===== BANDERAS A LA DERECHA EN MOBILE ===== */
+    .navbar-nav .nav-item:last-child {
+        margin-left: auto;
+    }
+
+    // colores cuando se despliga el menu hamburguesa
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.130);
+        backdrop-filter: blur(6px);
+    }
+
 }
 
 
@@ -62,12 +84,12 @@
    
     .titulo-principal {
         /* solo achico el font-size*/
-        @include tipografiaTamanio(1.5em,750);
+        @include tipografiaTamanio(1.5em,500);
     }
     
     .titulo-secundario {
-        /* solo achico el font-size */
-        @include tipografiaTamanio(1em,200);
+         /* slo achico el font-size */
+         @include tipografiaTamanio(1em,500);
     }
 
     .tours-card {

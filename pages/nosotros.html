@@ -37,11 +37,13 @@
     <link rel="icon" href="../img/favicon-android-icon-192x192.png" type="image/png" sizes="192x192">
     <link rel="apple-touch-icon" href="../img/favicon-apple-180x180.png" sizes="180x180">    
 
-    <!-- Google Fonts y Bootstrap -->
+     <!-- Google Fonts y Bootstrap -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
-    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">    
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> -->
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">    
     
@@ -71,10 +73,10 @@
                 <!-- SELECTOR DE IDIOMA (DESKTOP) -->
                 <div class="lang-switch d-none d-md-flex ms-auto me-3">                    
                     <a href="./nosotros.html" aria-label="English">
-                        <img class="logo-mediano" src="../img/united-states-flag-icon.webp" alt="English">
+                        <img class="logo-mini" src="../img/united-states-flag-icon.webp" alt="English">
                     </a>                                
                     <a href="../es/pages/nosotros.html" aria-label="Español">
-                        <img class="logo-mediano" src="../img/spain-country-flag-icon.png" alt="Español">
+                        <img class="logo-mini" src="../img/spain-flag-icon.png" alt="Español">
                     </a>
                 </div>                
 
@@ -106,7 +108,7 @@
                                     <img class="logo-mini" src="../img/united-states-flag-icon.webp" alt="English">
                                 </a>                                
                                 <a href="../es/pages/nosotros.html" aria-label="Español">
-                                    <img class="logo-mini" src="../img/spain-country-flag-icon.png" alt="Español">
+                                    <img class="logo-mini" src="../img/spain-flag-icon.png" alt="Español">
                                 </a>
                             </li>
 
@@ -117,56 +119,63 @@
         </nav>
     </header>
 
-    <main class="container contenedor-principal-main">
+    <main class="contenedor-principal-main"> 
+        <div class="container">
 
-        <!-- Títulos -->
-        <div class="mb-4">
             <h1 class="titulo-principal">About BA Thematic Walking Tours</h1>
-            <h2 class="titulo-secundario">Maria Luz La Rocca - Local Expert Guide</h2>            
-        </div>
+            <h2 class="titulo-secundario mb-4">Maria Luz La Rocca - Local Expert Guide</h2>                    
+            <!-- Contenido -->
+            <div class="row g-4 align-items-start">
 
-        <!-- Contenido -->
-        <div class="row g-4 align-items-start">
+                <!-- Imagen -->
+                <div class="col-md-4">
+                    <img src="../img/MariaLuzLaRocca.jpeg"
+                        class="img-fluid rounded"
+                        alt="Portrait of Maria Luz La Rocca, local expert guide in Buenos Aires">
+                </div>
 
-            <!-- Imagen -->
-            <div class="col-md-4">
-                <img src="../img/MariaLuzLaRocca.jpeg"
-                    class="img-fluid rounded"
-                    alt="Portrait of Maria Luz La Rocca, local expert guide in Buenos Aires">
-            </div>
+                <!-- Texto -->
+                <div class="col-md-8">
+                    
+                    <p>Luz is an expert in Argentine tourism and an English-speaking guide, passionate about revealing the hidden. She studied Tourism in Buenos Aires and worked as a guide at the Teatro Colón in the same city. Later, during the six years she lived in London, she became fascinated by the architecture and culture of the various European cities she visited and returned with a desire to re-evaluate her own culture through visits to foreigners. Her fascination with Freemasonry began while observing architecture in Europe and Buenos Aires, where geometry, symbolism, and power converge.</p>
 
-            <!-- Texto -->
-            <div class="col-md-8">
-                <p>Luz is an expert in Argentine tourism and an English-speaking guide, passionate about revealing the hidden. She studied Tourism in Buenos Aires and worked as a guide at the Teatro Colón in the same city. Later, during the six years she lived in London, she became fascinated by the architecture and culture of the various European cities she visited and returned with a desire to re-evaluate her own culture through visits to foreigners. Her fascination with Freemasonry began while observing architecture in Europe and Buenos Aires, where geometry, symbolism, and power converge.</p>
+                    <p>With years of experience guiding international visitors, and visiting all kind of Cultural 
+                    points in many European cities, she transforms each walk into an intimate exploration of the city’s hidden soul.
+                    Luz believes every monument, every symbol, and every story carries a message — if you know how to look.
+                    </p>                
 
-                <p>With years of experience guiding international visitors, and visiting all kind of Cultural 
-                points in many European cities, she transforms each walk into an intimate exploration of the city’s hidden soul.
-                Luz believes every monument, every symbol, and every story carries a message — if you know how to look.
-                </p>                
+                    <p class="fw-semibold fst-italic">“My tours are not about what you see — they’re about what you discover”</p>
 
-                <p class="fw-semibold fst-italic">“My tours are not about what you see — they’re about what you discover”</p>
-
-                <div class="d-flex gap-3 mt-3">
-                    <a href="https://www.instagram.com/ba_thematicwalkingtours/" target="_blank" rel="noopener noreferrer">
-                        <img class="logo-mediano" src="../img/iconoInstagramColor.png" alt="Logo Instagram">
-                    </a>                    
-                    <a href="https://www.linkedin.com/in/mar%C3%ADa-luz-la-rocca-5468b616/" target="_blank" rel="noopener noreferrer">
-                        <img class="logo-mediano" src="../img/iconoLinkedinColor.png" alt="Logo Linkedin">
-                    </a>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="https://www.instagram.com/ba_thematicwalkingtours/" target="_blank" rel="noopener noreferrer">
+                            <img class="logo-mediano" src="../img/iconoInstagramColor.png" alt="Logo Instagram">
+                        </a>                    
+                        <a href="https://www.linkedin.com/in/mar%C3%ADa-luz-la-rocca-5468b616/" target="_blank" rel="noopener noreferrer">
+                            <img class="logo-mediano" src="../img/iconoLinkedinColor.png" alt="Logo Linkedin">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div> <!-- fin container -->
     </main>
 
-    <footer>
-        <ul class="footer-enlaces">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#tours">Tours</a></li>
-            <li><a href="./nosotros.html">About</a></li>
-            <li><a href="./contacto.html">Contact</a></li>
-            <li><a href="./faq.html">FAQ</a></li>            
-        </ul>
-    </footer>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <ul class="footer-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../index.html#tours">Tours</a></li>
+                <li><a href="./nosotros.html">About</a></li>
+                <li><a href="./contacto.html">Contact</a></li>
+                <li><a href="./faq.html">FAQ</a></li>                  
+            </ul>
+        </div>
+
+        <hr class="linea-dorada">
+
+        <p class="footer-copy">
+            © 2026 BA Thematic Walking Tours. All rights reserved.
+        </p>
+    </footer>   
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
