@@ -12,6 +12,13 @@
 /* responsive tablet */
 @media (max-width: $tamanioTablet) {
 
+    /* cambio imagen header vertical */
+    .index-header{    
+        background-image: url(../img/backgroundHero-vertical.jpeg);
+        // background-position-x: 0%;
+        // background-position-y: 0%;
+    }
+
     .contenedor-hero {  
         /* achico espacio a la izquierda, achico distancia entre elementos */        
         @include paddingGap(2rem,1em);
@@ -19,9 +26,19 @@
 
     .hero-tituloSitio {
         /* achico el font-size */        
-        @include tipografiaTamanio(2.5em,800);  
+//        @include tipografiaTamanio(2.5em,800);  
+        width: 50%;
+        font-weight: 600;
+        font-size: 2.5rem;
     }
        
+    .hero-subtitulo {
+        width: 50%;
+
+        font-weight: 300;
+        font-size: 1.5rem;   
+    }
+
     .hero-boton {
         /* achico el font-size */
         @include tipografiaTamanio(1.5em, 500);
@@ -58,7 +75,7 @@
         backdrop-filter: blur(6px);
     }
 
-    /* footer achicar padding */
+    /* footer achicar padding ******/
     .site-footer {
         padding: 2rem 0 0;
     }
@@ -71,8 +88,8 @@
         gap: 0.5rem;
 
         a {
-            font-weight: 300;
-            //color: yellow;
+            font-weight: 400;
+            font-size: 1rem;
         }
     }
 
@@ -80,12 +97,29 @@
 
 
 /* responsive mobile */
-@media (max-width: $tamanioMobile) {
-    .hero-tituloSitio {     
-        /* achico el font-size*/        
-        @include tipografiaTamanio(1.5em,800); 
+@media (max-width: $tamanioMobile) {    
+    /* cambio imagen header vertical */
+    .index-header{    
+        background-image: url(../img/backgroundHero-vertical.jpeg);
+        // background-position-x: 10%;
+        //background-position-y: -30%;        
     }
-    
+
+    .hero-tituloSitio {
+        /* achico el font-size */        
+//        @include tipografiaTamanio(2.5em,800);  
+        width: 50%;
+        font-weight: 600;
+        font-size: 2rem;
+    }
+       
+    .hero-subtitulo {
+        width: 50%;
+        font-weight: 300;
+        font-size: 1.2rem;   
+    }
+
+
     .hero-boton{
         /* achico el font-size */
         @include tipografiaTamanio(1em, 500);           
