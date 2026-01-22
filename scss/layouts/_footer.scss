@@ -1,10 +1,9 @@
 /****** footer layout *****************************************/
 .site-footer {
-    background-color: #304a6f; //rgb(48,74,111)
-    color: #fdfaf3;
+    background-color: $color-brand-navy; 
     padding: 2.5rem 0 1.2rem;
     /* borde dorado */
-    border-top: 3px solid #b8a77a;
+    border-top: 3px solid $color-gold-ui;
 }
 
 .footer-content {
@@ -24,21 +23,21 @@
         font-size: 1rem;
 
         &:hover {
-            color: #fdfaf3;
+            color: $color-bg-paper;
             text-decoration: none;
             // efecto glow
-            text-shadow: 0 0 5px #b8a77a;
+            text-shadow: 0 0 5px $color-gold-ui;
         }
 
-        /* ===== FOOTER: LINK ACTIVO ===== */
+        /* link activo footer */
         &[aria-current="page"] {
-            color: #b8a77a;
+            color: $color-gold-ui;
         }    
     }
 }
 
-
 .footer-copy {
+    color: $color-bg-paper;    
     text-align: center;
     font-size: 0.8rem;
     margin-top: 1.2rem;
@@ -47,7 +46,7 @@
 .linea-dorada {
     height: 2px; /* Grosor */
     width: 100%; /* Ancho */
-    background-color: #b8a77a; /* Color de la línea */
+    background-color: $color-gold-ui; /* Color de la línea */
     margin: 20px auto; /* Márgenes superior/inferior y centrado */
     border: none; /* Elimina estilos de navegador por defecto */
 }

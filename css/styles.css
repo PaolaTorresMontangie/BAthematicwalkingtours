@@ -4,11 +4,15 @@
 }
 
 /*
-background-color: #f4eee6;
-
-// COLOR FUENTES GENERAL 
-//azul marino
-    color: #1f2a36; 
+| Rol                 | Variable            |
+| ------------------- | ------------------- |
+| Fondo general       | `$color-bg-general` |
+| Fondo claro / cards | `$color-bg-paper`   |
+| Texto principal     | `$color-text-main`  |
+| Azul marca          | `$color-brand-navy` |
+| Dorado UI           | `$color-gold-ui`    |
+| Dorado marca        | `$color-gold-brand` |
+| Dorado profundo     | `$color-gold-deep`  |
 */
 /****** header layout *****************************************/
 /* RESET Y GENERALES ********************/
@@ -93,7 +97,7 @@ a {
 
 .hero-tituloSitio {
   width: 60%;
-  color: #fff;
+  color: #fdfaf3;
   font-family: "Lora", serif;
   font-weight: 600;
   font-size: 3rem;
@@ -117,7 +121,7 @@ a {
 
 .btn-hero {
   display: inline-block;
-  background-color: #304a6f; /* azul marino marca */
+  background-color: #304a6f;
   color: #fdfaf3;
   padding: 0.7rem 1.8rem;
   border-radius: 10px;
@@ -130,9 +134,9 @@ a {
 }
 
 .btn-hero:hover {
-  background-color: #3b5c88;
   transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  border-color: #b8a77a;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .lang-switch {
@@ -155,7 +159,7 @@ a {
   text-align: right;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
-  /* ===== NAVBAR: LINK ACTIVO ===== */
+  /* link activo navbar */
 }
 .custom-navbar .nav-link[aria-current=page] {
   color: #b8a77a !important;
@@ -168,7 +172,7 @@ a {
   padding-bottom: 0.5rem;
 }
 .custom-navbar a:hover {
-  color: #fdfaf3;
+  color: #b8a77a;
   text-decoration: none;
   text-shadow: 0 0 5px #b8a77a;
 }
@@ -206,7 +210,7 @@ a {
   display: inline-block;
   background-color: #a68458;
   color: #fdfaf3;
-  text-shadow: 2px 2px 2px #333333;
+  text-shadow: 2px 2px 2px #1f2a36;
   padding: 0.6rem 1.6rem;
   border-radius: 8px;
   text-decoration: none;
@@ -215,8 +219,7 @@ a {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .btn-secondary:hover {
-  background-color: #bb986b;
-  /* text-shadow: 0 0 5px #ffffff; efecto glow   */
+  background-color: #b8a77a;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
@@ -368,7 +371,7 @@ a {
   margin: 1rem auto;
   gap: 1rem; /* Espacio entre las celdas */
   border-radius: 0.5rem;
-  background-color: #f8f7f3;
+  background-color: #fdfaf3;
   overflow: hidden;
 }
 
@@ -416,7 +419,6 @@ a {
 /****** footer layout *****************************************/
 .site-footer {
   background-color: #304a6f;
-  color: #fdfaf3;
   padding: 2.5rem 0 1.2rem;
   /* borde dorado */
   border-top: 3px solid #b8a77a;
@@ -444,13 +446,14 @@ a {
   text-shadow: 0 0 5px #b8a77a;
 }
 .footer-links a {
-  /* ===== FOOTER: LINK ACTIVO ===== */
+  /* link activo footer */
 }
 .footer-links a[aria-current=page] {
   color: #b8a77a;
 }
 
 .footer-copy {
+  color: #fdfaf3;
   text-align: center;
   font-size: 0.8rem;
   margin-top: 1.2rem;
