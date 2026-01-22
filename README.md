@@ -1,107 +1,73 @@
-# BA Thematic Walking Tours  
-Sitio web oficial de visitas guiadas temáticas en la ciudad de Buenos Aires.  
-Explora la historia oculta de la ciudad a través de tours en inglés guiados por una experta local.
+# BA Thematic Walking Tours
+
+Sitio web bilingüe (EN / ES) desarrollado para **BA Thematic Walking Tours**, una propuesta de visitas guiadas temáticas en Buenos Aires orientada a viajeros internacionales.
+
+El proyecto prioriza **arquitectura clara, buenas prácticas de frontend, SEO, accesibilidad y diseño responsive**, utilizando HTML semántico, Sass y Bootstrap.
 
 ---
 
-## 🌐 Demo del sitio
-*(Agregar URL cuando el sitio esté publicado)*
+## 🌍 Descripción general
 
----
+BA Thematic Walking Tours ofrece recorridos a pie en inglés y español, enfocados en historia, arquitectura, simbolismo y cultura local.
 
-## 📌 Descripción del proyecto
-Este proyecto es un sitio web estático desarrollado para presentar y promocionar tours temáticos en Buenos Aires.  
-Incluye información sobre:
-
-- Tours disponibles  
-- Contacto  
-- Biografía de la guía  
-- Fotografías y material visual  
-- Navegación adaptada a dispositivos móviles (responsive)
+El sitio presenta:
+- Página principal con tours destacados
+- Páginas de detalle de cada tour
+- Sección About / Nosotros
+- Página de Contacto
+- FAQ
+- Versión bilingüe con estructura paralela EN / ES
 
 ---
 
 ## 🛠 Tecnologías utilizadas
 
-- **HTML5** — estructura y semántica  
-- **CSS3 / Flexbox / Grid** — estilos y layout  
-- **Bootstrap 5.3** — componentes, responsive y utilidades  
-- **Google Fonts** — Montserrat & Lora
-- **JavaScript (Bootstrap Bundle)** — offcanvas y menú móvil  
+- **HTML5** – estructura semántica y accesible  
+- **CSS3 / Sass (SCSS)** – estilos modulares y escalables  
+- **Bootstrap 5** – layout responsive y componentes base  
+- **JavaScript (vanilla)** – pequeños comportamientos UI  
+- **SEO técnico** – meta tags, Open Graph, Twitter Cards, hreflang  
 
 ---
 
 ## 📁 Estructura del proyecto
 
-.
-├── index.html
-├── pages/
-│ ├── nosotros.html
-│ └── contacto.html
+```text
+/
+├── index.html                # Home (EN)
+├── pages/                    # Páginas internas (EN)
+│   ├── nosotros.html
+│   ├── contacto.html
+│   ├── faq.html
+│   ├── tourCementerioRecoleta.html
+│   ├── tourMasonesEnBA.html
+│   └── tourPalacioBarolo.html
+│
+├── es/                       # Versión en español
+│   ├── index.html            # Home (ES)
+│   └── pages/
+│       ├── nosotros.html
+│       ├── contacto.html
+│       ├── faq.html
+│       ├── tourCementerioRecoleta.html
+│       ├── tourMasonesEnBA.html
+│       └── tourPalacioBarolo.html
+│
 ├── css/
-│ └── styles.css
-├── img/
-│ ├── logo.png
-│ ├── fotos del tour
-│ └── iconos (instagram, linkedin, etc.)
+│   └── styles.css            # CSS compilado
+│
+├── scss/
+│   ├── utilities/
+│   │   ├── _variables.scss   # Paleta, tipografías, breakpoints
+│   │   ├── _mixins.scss      # Mixins reutilizables
+│   │   └── _extends.scss    # Placeholders (%)
+│   │
+│   ├── layouts/
+│   │   ├── _header.scss
+│   │   ├── _main.scss
+│   │   └── _footer.scss
+│   │
+│   └── styles.scss           # Archivo principal de Sass
+│
+├── img/                      # Imágenes, iconos, og-image, favicon
 └── README.md
-
-
----
-
-## 📱 Responsiveness
-El sitio está optimizado para:
-
-- Móviles (<768px)
-- Tablets
-- Escritorio
-
-Incluye:
-
-- Menú hamburguesa con **offcanvas de Bootstrap**
-- Imágenes flexibles
-- Layouts reacomodados mediante *media queries*
-
----
-
-## 🔐 Accesibilidad (WCAG AA)
-Se implementan prácticas de accesibilidad como:
-
-- Atributos `alt` descriptivos  
-- Navegación clara  
-- Roles y labels en botones interactivos (`aria-label`)  
-- Contraste adecuado y tipografías legibles  
-
----
-
-## ✨ Características principales
-
-- Diseño limpio y moderno  
-- Información clara de cada tour  
-- Fotos reales tomadas durante los recorridos  
-- Enlaces a redes sociales oficiales  
-- Código ordenado y fácil de mantener  
-- Navegación intuitiva  
-- SEO básico incorporado (`meta description`, títulos correctos)
-
----
-
-## 📧 Contacto
-Para consultas o mejoras del proyecto:
-
-- Instagram: **@ba_thematicwalkingtours**  
-- Sitio web: *(agregar enlace cuando esté publicado)*  
-
----
-
-## 📜 Licencia
-Este proyecto puede usarse con fines educativos o personales.  
-Si deseás reutilizar contenido (texto, imágenes o marca), solicitá permiso previo.
-
----
-
-## 💬 Contribuciones
-Pull requests y sugerencias son bienvenidas.  
-Para cambios importantes, abrí primero un *issue* explicando la propuesta.
-
----
