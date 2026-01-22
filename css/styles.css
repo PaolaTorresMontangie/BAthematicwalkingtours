@@ -298,6 +298,9 @@ a {
   justify-content: center;
   padding: 1.4rem 1.6rem 1.6rem;
 }
+.card-content .btn-secondary {
+  margin-top: auto;
+}
 
 /* bootstrap acordeon personalizado --------------------------------------- */
 .section-faq {
