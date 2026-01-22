@@ -1,12 +1,22 @@
-@mixin flexRowCenter {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;    
+@mixin font (
+    $font-family, 
+    $font-size, 
+    $font-weight) 
+    {
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;   
 }
 
 @mixin flexColumn {
     display: flex;
     flex-direction: column; 
+}
+
+@mixin flexRow {
+    display: flex;
+    flex-direction: row;
+    //justify-content: center;    
 }
 
 @mixin imagenGrilla {    
@@ -15,12 +25,8 @@
     object-fit: cover;
 }
 
-@mixin tipografiaTamanio ($fontSize, $fontWeight) {
-    font-size: $fontSize;
-    font-weight: $fontWeight;
-}
-
 @mixin paddingGap ($paddingLeft, $rowGap) {
     padding-left: $paddingLeft;
     row-gap: $rowGap;
 }
+

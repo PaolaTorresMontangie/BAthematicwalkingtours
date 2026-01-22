@@ -15,8 +15,6 @@
     /* cambio imagen header vertical */
     .index-header{    
         background-image: url(../img/backgroundHero-vertical.jpeg);
-        // background-position-x: 0%;
-        // background-position-y: 0%;
     }
 
     .contenedor-hero {  
@@ -26,45 +24,34 @@
 
     .hero-tituloSitio {
         /* achico el font-size */        
-//        @include tipografiaTamanio(2.5em,800);  
-        width: 50%;
-        font-weight: 600;
-        font-size: 2.5rem;
+        @include font($fontAccent,2.5rem,600);
     }
        
     .hero-subtitulo {
-        width: 50%;
-
-        font-weight: 300;
-        font-size: 1.5rem;   
+        @include font($fontAccent,1.5rem, 300);  
     }
 
-    .hero-boton {
-        /* achico el font-size */
-        @include tipografiaTamanio(1.5em, 500);
-    }
+    .btn-hero {
+         /* achico el font-size */
+        @include font($fontPrimary, 1.2rem, 500);
+    }        
    
     .titulo-principal {
         /* achico el font-size */
-        @include tipografiaTamanio(2em,500);   
+        @include font($fontAccent,2em,500);         
     }
    
     .titulo-secundario {
-         /* achico el font-size */
-         @include tipografiaTamanio(1.2em,500);
-    }
-
-    .tours-card {
-        /* solo achivo el ancho */
-        width: 20rem;           
+        /* achico el font-size */
+        @include font($fontAccent,1.2em,500); 
     }
 
     /* bootstrap navbar personalizada ------------------- */
     .custom-navbar a {
-        @include tipografiaTamanio(1.2em,450);
+        @include font($fontPrimary,1em,450);
     }
 
-    /* ===== BANDERAS A LA DERECHA EN MOBILE ===== */
+    /* banderitas a la derecha en mobile */
     .navbar-nav .nav-item:last-child {
         margin-left: auto;
     }
@@ -75,16 +62,31 @@
         backdrop-filter: blur(6px);
     }
 
-    /* footer achicar padding ******/
+    /* faq accordion *******************/
+    .section-faq {
+        // boton de pregunta
+        .accordion-button {
+            @include font($fontPrimary, 1.2rem, 500);  
+            padding: 1.2rem 0;
+        }
+        
+        // respuesta
+        .accordion-body {
+            @include font($fontPrimary, 1.2rem, 300);
+            padding: 0.5rem 0 1.2rem;
+            color: $color-text-main;
+        }        
+    }
+
+    /* footer achicar padding *******************/
     .site-footer {
         padding: 2rem 0 0;
     }
 
     /* footer vertical y achicar letras espacios */
     .footer-links {
+        @include flexColumn;               
         list-style: none;
-        display: flex;
-        flex-direction: column;
         gap: 0.5rem;
 
         a {
@@ -92,51 +94,34 @@
             font-size: 1rem;
         }
     }
-
 }
 
 
 /* responsive mobile */
 @media (max-width: $tamanioMobile) {    
-    /* cambio imagen header vertical */
-    .index-header{    
-        background-image: url(../img/backgroundHero-vertical.jpeg);
-        // background-position-x: 10%;
-        //background-position-y: -30%;        
-    }
-
+    
     .hero-tituloSitio {
         /* achico el font-size */        
-//        @include tipografiaTamanio(2.5em,800);  
-        width: 50%;
-        font-weight: 600;
-        font-size: 2rem;
+        @include font($fontAccent,2rem,600);
     }
        
     .hero-subtitulo {
-        width: 50%;
-        font-weight: 300;
-        font-size: 1.2rem;   
+        @include font($fontAccent,1.2rem, 300);
     }
 
-
-    .hero-boton{
-        /* achico el font-size */
-        @include tipografiaTamanio(1em, 500);           
-    }
+    .btn-hero {
+         /* achico el font-size */
+        @include font($fontPrimary, 0.8rem, 500);        
+    }    
    
     .titulo-principal {
         /* solo achico el font-size*/
-        @include tipografiaTamanio(1.5em,500);
+        @include font($fontAccent,1.5rem,500); 
     }
     
     .titulo-secundario {
          /* slo achico el font-size */
-         @include tipografiaTamanio(1em,500);
+        @include font($fontAccent,1em,500);         
     }
 
-    .tours-card {
-        /* solo achivo el ancho */
-        width: 15rem;           
-    }
 }

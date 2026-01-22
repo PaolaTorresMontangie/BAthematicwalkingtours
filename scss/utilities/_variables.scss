@@ -10,6 +10,9 @@
 | Dorado profundo     | `$color-gold-deep`  |
 */
 
+$fontPrimary: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+$fontAccent: 'Lora', Georgia, 'Times New Roman', serif;
+
 // Colores base
 $color-bg-general: #f4eee6;        // fondo general
 $color-bg-paper:   #fdfaf3;        // tarjetas, texto claro

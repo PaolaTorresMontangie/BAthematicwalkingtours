@@ -26,7 +26,7 @@ Incluye información sobre:
 - **HTML5** — estructura y semántica  
 - **CSS3 / Flexbox / Grid** — estilos y layout  
 - **Bootstrap 5.3** — componentes, responsive y utilidades  
-- **Google Fonts** — Montserrat & Varela Round  
+- **Google Fonts** — Montserrat & Lora
 - **JavaScript (Bootstrap Bundle)** — offcanvas y menú móvil  
 
 ---

@@ -1,7 +1,6 @@
-%fontPrimaria {
-    font-family: 'Varela Round', 'Montserrat', sans-serif;    
-}
-
-%fontSecundaria {
-    font-family: "Montserrat", sans-serif;
+%btnBase {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
 }

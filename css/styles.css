@@ -1,6 +1,9 @@
 @charset "UTF-8";
-.contenedor-hero {
-  font-family: "Montserrat", sans-serif;
+.btn-secondary, .btn-hero {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 /*
@@ -15,7 +18,7 @@
 | Dorado profundo     | `$color-gold-deep`  |
 */
 /****** header layout *****************************************/
-/* RESET Y GENERALES ********************/
+/* reset y generales ********************/
 * {
   margin: 0;
   padding: 0;
@@ -23,12 +26,10 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background-color: #f4eee6;
   color: #1f2a36;
   scroll-behavior: smooth;
-  font-weight: 400;
-  line-height: 1.6;
   letter-spacing: 0.015em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,14 +37,11 @@ body {
 
 /* titulos */
 h1, h2, h3 {
-  font-family: "Lora", serif;
-  font-weight: 500;
-  letter-spacing: 0.03em;
+  font-family: "Lora", Georgia, "Times New Roman", serif;
 }
 
 h1 {
   font-size: 2.6rem;
-  line-height: 1.2;
 }
 
 h3 {
@@ -51,8 +49,7 @@ h3 {
 }
 
 p {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 a {
@@ -80,7 +77,6 @@ a {
 .contenedor-hero {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
   height: 80%;
   max-height: 80%;
@@ -96,60 +92,39 @@ a {
 }
 
 .hero-tituloSitio {
-  width: 60%;
-  color: #fdfaf3;
-  font-family: "Lora", serif;
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-size: 3.4rem;
   font-weight: 600;
-  font-size: 3rem;
-  letter-spacing: 0.03em;
-  line-height: 1.2;
+  color: #fdfaf3;
+  width: 60%;
+  margin-top: 0.5rem;
 }
 
 .hero-subtitulo {
-  width: 50%;
-  margin-bottom: 2rem;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: "Lora", Georgia, "Times New Roman", serif;
   font-size: 2rem;
-}
-
-.hero h1 {
-  font-size: 2.6rem;
-  margin-bottom: 1rem;
+  font-weight: 400;
+  width: 50%;
+  color: #fff;
 }
 
 .btn-hero {
-  display: inline-block;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
   background-color: #304a6f;
   color: #fdfaf3;
+  letter-spacing: 0.05em;
   padding: 0.7rem 1.8rem;
   border-radius: 10px;
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 0.05em;
   border: 2px solid #d6b36a;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.15);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s;
 }
 
 .btn-hero:hover {
   transform: translateY(-1px);
   border-color: #b8a77a;
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-}
-
-.lang-switch {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-.lang-switch img {
-  cursor: pointer;
-  opacity: 0.85;
-}
-.lang-switch img:hover {
-  opacity: 1;
 }
 
 /* bootstrap navbar personalizada color idem footer */
@@ -165,6 +140,7 @@ a {
   color: #b8a77a !important;
 }
 .custom-navbar a {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.3rem;
   font-weight: 500;
   color: #fff !important;
@@ -186,19 +162,18 @@ a {
   filter: invert(1);
 }
 
-/* ===== NAVBAR DESKTOP: LINKS A LA DERECHA ===== */
+/* navbar links a la derecha para desktop */
 .navbar-nav {
   margin-left: auto;
+  /* banderitas de idioma */
 }
-
-/* ===== BANDERITAS DE IDIOMA ===== */
 .navbar-nav .nav-item:last-child {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 0.5rem;
   margin-left: 1.2rem; /* pequeño respiro respecto a FAQ */
 }
-
 .navbar-nav .nav-item:last-child img {
   height: 20px;
   width: auto;
@@ -207,16 +182,12 @@ a {
 /****** fin header layout *****************************************/
 /****** main layout *****************************************/
 .btn-secondary {
-  display: inline-block;
   background-color: #a68458;
   color: #fdfaf3;
   text-shadow: 2px 2px 2px #1f2a36;
   padding: 0.6rem 1.6rem;
-  border-radius: 8px;
-  text-decoration: none;
   border: 2px solid #b8a77a;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.45);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 .btn-secondary:hover {
   background-color: #b8a77a;
@@ -238,20 +209,19 @@ a {
   margin: 0;
 }
 
-/* titulo con lineas degrade */
+/* titulo con lineas degrade (usa flexbox para alinear texto y lineas decorativas) */
 .titulo-principal {
   display: flex;
   flex-direction: row;
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #1f2a36;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: "Lora", serif;
-  font-weight: 400;
-  font-size: 2.2em;
-  letter-spacing: 0.03em;
   gap: 1.2rem;
   margin-bottom: 2rem;
-  color: #1f2a36;
   /* Línea izquierda */
 }
 .titulo-principal::before {
@@ -271,10 +241,9 @@ a {
 }
 
 .titulo-secundario {
-  font-family: "Lora", serif;
-  font-weight: 500;
-  font-size: 1.5em;
-  letter-spacing: 0.03em;
+  font-family: "Lora", Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
+  font-weight: 400;
   text-align: center;
 }
 
@@ -332,7 +301,7 @@ a {
 
 /* bootstrap acordeon personalizado --------------------------------------- */
 .section-faq {
-  max-width: 100%;
+  max-width: 90%;
   margin: 0 auto;
 }
 .section-faq .accordion-item {
@@ -341,10 +310,12 @@ a {
   border-bottom: 1px solid #b8a77a;
 }
 .section-faq .accordion-button {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  background-color: transparent;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
   padding: 1.2rem 0;
+  background-color: transparent;
+  color: #1f2a36;
 }
 .section-faq .accordion-button:not(.collapsed) {
   background-color: transparent;
@@ -355,7 +326,11 @@ a {
   border-color: transparent;
 }
 .section-faq .accordion-body {
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
   padding: 0.5rem 0 1.2rem;
+  color: #1f2a36;
 }
 
 /* grid para imagenes de tours ---------------------------------------------------- */
@@ -426,12 +401,14 @@ a {
 
 .footer-content {
   display: flex;
+  flex-direction: row;
   justify-content: center;
 }
 
 .footer-links {
-  list-style: none;
   display: flex;
+  flex-direction: row;
+  list-style: none;
   gap: 2rem;
 }
 .footer-links a {
@@ -482,40 +459,40 @@ a {
   }
   .hero-tituloSitio {
     /* achico el font-size */
-    width: 50%;
-    font-weight: 600;
+    font-family: "Lora", Georgia, "Times New Roman", serif;
     font-size: 2.5rem;
+    font-weight: 600;
   }
   .hero-subtitulo {
-    width: 50%;
-    font-weight: 300;
+    font-family: "Lora", Georgia, "Times New Roman", serif;
     font-size: 1.5rem;
+    font-weight: 300;
   }
-  .hero-boton {
+  .btn-hero {
     /* achico el font-size */
-    font-size: 1.5em;
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.2rem;
     font-weight: 500;
   }
   .titulo-principal {
     /* achico el font-size */
+    font-family: "Lora", Georgia, "Times New Roman", serif;
     font-size: 2em;
     font-weight: 500;
   }
   .titulo-secundario {
     /* achico el font-size */
+    font-family: "Lora", Georgia, "Times New Roman", serif;
     font-size: 1.2em;
     font-weight: 500;
   }
-  .tours-card {
-    /* solo achivo el ancho */
-    width: 20rem;
-  }
   /* bootstrap navbar personalizada ------------------- */
   .custom-navbar a {
-    font-size: 1.2em;
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1em;
     font-weight: 450;
   }
-  /* ===== BANDERAS A LA DERECHA EN MOBILE ===== */
+  /* banderitas a la derecha en mobile */
   .navbar-nav .nav-item:last-child {
     margin-left: auto;
   }
@@ -523,15 +500,29 @@ a {
     background-color: rgba(0, 0, 0, 0.13);
     backdrop-filter: blur(6px);
   }
-  /* footer achicar padding ******/
+  /* faq accordion *******************/
+  .section-faq .accordion-button {
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 1.2rem 0;
+  }
+  .section-faq .accordion-body {
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 0.5rem 0 1.2rem;
+    color: #1f2a36;
+  }
+  /* footer achicar padding *******************/
   .site-footer {
     padding: 2rem 0 0;
   }
   /* footer vertical y achicar letras espacios */
   .footer-links {
-    list-style: none;
     display: flex;
     flex-direction: column;
+    list-style: none;
     gap: 0.5rem;
   }
   .footer-links a {
@@ -541,39 +532,34 @@ a {
 }
 /* responsive mobile */
 @media (max-width: 390px) {
-  /* cambio imagen header vertical */
-  .index-header {
-    background-image: url(../img/backgroundHero-vertical.jpeg);
-  }
   .hero-tituloSitio {
     /* achico el font-size */
-    width: 50%;
-    font-weight: 600;
+    font-family: "Lora", Georgia, "Times New Roman", serif;
     font-size: 2rem;
+    font-weight: 600;
   }
   .hero-subtitulo {
-    width: 50%;
-    font-weight: 300;
+    font-family: "Lora", Georgia, "Times New Roman", serif;
     font-size: 1.2rem;
+    font-weight: 300;
   }
-  .hero-boton {
+  .btn-hero {
     /* achico el font-size */
-    font-size: 1em;
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 0.8rem;
     font-weight: 500;
   }
   .titulo-principal {
     /* solo achico el font-size*/
-    font-size: 1.5em;
+    font-family: "Lora", Georgia, "Times New Roman", serif;
+    font-size: 1.5rem;
     font-weight: 500;
   }
   .titulo-secundario {
     /* slo achico el font-size */
+    font-family: "Lora", Georgia, "Times New Roman", serif;
     font-size: 1em;
     font-weight: 500;
-  }
-  .tours-card {
-    /* solo achivo el ancho */
-    width: 15rem;
   }
 }
 

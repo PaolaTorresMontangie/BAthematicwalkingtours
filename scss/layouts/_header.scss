@@ -1,19 +1,17 @@
 /****** header layout *****************************************/
 
-/* RESET Y GENERALES ********************/
+/* reset y generales ********************/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Montserrat", sans-serif;  
+body {    
+    font-family: $fontPrimary; 
     background-color: $color-bg-general;
     color: $color-text-main;
     scroll-behavior: smooth;
-    font-weight: 400;
-    line-height: 1.6;
     letter-spacing: 0.015em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -21,14 +19,11 @@ body {
 
 /* titulos */
 h1, h2, h3 {
-    font-family: "Lora", serif;
-    font-weight: 500;
-    letter-spacing: 0.03em;
+    font-family: $fontAccent;
 }
 
 h1 {
     font-size: 2.6rem;
-    line-height: 1.2;
 }
 
 h3 {
@@ -36,8 +31,7 @@ h3 {
 }
 
 p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
+    font-family: $fontPrimary;
 }
 
  a {
@@ -64,8 +58,6 @@ p {
 /* contenedor para la descripcion del sitio */
 .contenedor-hero {
     @include flexColumn;
-    @extend %fontSecundaria;
-    justify-content: flex-start;    
     align-items: flex-start;        
     height: 80%;
     max-height: 80%;
@@ -80,50 +72,31 @@ p {
 }
 
 .hero-tituloSitio {    
-    // @extend %fontSecundaria;
-    // @include tipografiaTamanio(5.5em,800 );
+    @include font($fontAccent, 3.4rem, 600);  
+    color: $color-bg-paper;      
     width: 60%;
-    color: $color-bg-paper;
-    font-family: "Lora", serif;
-    font-weight: 600;
-    font-size: 3rem;
-    letter-spacing: 0.03em;
-    line-height: 1.2;
+    margin-top: 0.5rem;
 }
 
 .hero-subtitulo {
-    // @extend %fontSecundaria;    
-    // @include tipografiaTamanio (1.5em, 500); 
+    @include font($fontAccent, 2rem, 400);  
     width: 50%;
-    margin-bottom: 2rem;    
     color: #fff;    
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 2rem;    
-}
-
-.hero h1 { 
-    font-size: 2.6rem;
-    margin-bottom: 1rem;
 }
 
 .btn-hero {
-  display: inline-block;
-  background-color: $color-brand-navy;
-  color: $color-bg-paper;
-  padding: 0.7rem 1.8rem;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+    @extend %btnBase;
+    @include font($fontPrimary, 1.5rem, 500);  
+    background-color: $color-brand-navy;
+    color: $color-bg-paper;
 
-  border: 2px solid $color-gold-brand;
-
-  box-shadow:
+    letter-spacing: 0.05em; 
+    padding: 0.7rem 1.8rem;
+    border-radius: 10px; // piso el tamaño
+    border: 2px solid $color-gold-brand;
+    box-shadow:
     0 6px 18px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
-
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s;
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);  
 }
 
 .btn-hero:hover {
@@ -133,27 +106,11 @@ p {
   box-shadow:
     0 10px 26px rgba(0, 0, 0, 0.45),
     inset 0 1px 0 rgba(255, 255, 255, 0.25);
-
-}
-
-.lang-switch {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-
-    img {
-        cursor: pointer;
-        opacity: 0.85;  
-    }
-
-    img:hover {
-        opacity: 1;
-    }
 }
 
 /* bootstrap navbar personalizada color idem footer */
 .custom-navbar {
-    background-color: $color-brand-navy !important; //rgb(48,74,111) 
+    background-color: $color-brand-navy !important;
     // menu desktop horizontal normal / mobile alineado a la derecha
     align-items: flex-end;
     text-align: right;    
@@ -168,10 +125,7 @@ p {
     }
 
     a {
-        // @extend %fontSecundaria;
-        // @include tipografiaTamanio(1.5em,600);
-        font-size: 1.3rem;
-        font-weight: 500;
+        @include font($fontPrimary, 1.3rem, 500);
         color: #fff !important;
         padding-left: 0.5rem;
         padding-bottom: 0.5rem;
@@ -194,25 +148,22 @@ p {
     filter: invert(1);
 }
 
-/* ===== NAVBAR DESKTOP: LINKS A LA DERECHA ===== */
+/* navbar links a la derecha para desktop */
 .navbar-nav {
-margin-left: auto;
+    margin-left: auto;
+
+    /* banderitas de idioma */
+    .nav-item:last-child {
+        @include flexRow;    
+        align-items: center;
+        gap: 0.5rem;
+        margin-left: 1.2rem; /* pequeño respiro respecto a FAQ */ 
+        
+        img {
+            height: 20px;
+            width: auto;
+        }
+    }
 }
-
-/* ===== BANDERITAS DE IDIOMA ===== */
-.navbar-nav .nav-item:last-child {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-left: 1.2rem; /* pequeño respiro respecto a FAQ */  
-}
-
-.navbar-nav .nav-item:last-child img {
-    height: 20px;
-    width: auto;
-}
-
-
-
 
 /****** fin header layout *****************************************/

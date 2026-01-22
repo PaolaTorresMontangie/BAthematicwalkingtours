@@ -1,18 +1,16 @@
 /****** main layout *****************************************/
 
 .btn-secondary {
-    display: inline-block;
+    @extend %btnBase;
     background-color: $color-gold-deep;  
     color: $color-bg-paper;
+
     text-shadow: 2px 2px 2px $color-text-main;
     padding: 0.6rem 1.6rem;
-    border-radius: 8px;
-    text-decoration: none;
     border: 2px solid $color-gold-ui;
     box-shadow:
     0 3px 8px rgba(0, 0, 0, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.45);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
 
     &:hover {
         background-color: $color-gold-ui;
@@ -23,10 +21,8 @@
 }
 
 .contenedor-principal-main {
-    // padding: 2.5rem 0;    
     padding-top: 8rem;
     padding-bottom: 2.5rem;
-    // background-color: violet;
 }
 
 .logo-mediano{
@@ -39,23 +35,17 @@
     margin: 0;
 }
 
-/* titulo con lineas degrade */
+/* titulo con lineas degrade (usa flexbox para alinear texto y lineas decorativas) */
 .titulo-principal {
-    display: flex;
-    flex-direction: row;
+    @include flexRow;    
+    @include font($fontAccent, 2.2rem, 500);
+    color: $color-text-main;     
+
     align-items: center;
     justify-content: center;
     text-align: center;
-    
-    font-family: "Lora", serif;
-    font-weight: 400;
-    font-size: 2.2em;
-    letter-spacing: 0.03em;   
-
     gap: 1.2rem;
-    margin-bottom: 2rem; 
-
-    color: $color-text-main;            
+    margin-bottom: 2rem;   
 
     /* Línea izquierda */
     &::before {
@@ -83,15 +73,9 @@
 }
 
 .titulo-secundario { 
-    // @extend %fontSecundaria;
-    font-family: "Lora", serif;
-    font-weight: 500;
-    font-size: 1.5em;
-    letter-spacing: 0.03em;
-
+    @include font($fontAccent, 1.8rem, 400); 
     text-align: center;
 }
-
 
 /* cards ---------------------------------------------------------------------*/
 .grilla-main-cards {
@@ -146,8 +130,7 @@
 }
 
 .card-content {
-    display: flex;
-    flex-direction: column;
+    @include flexColumn;
     align-items: center;
     justify-content: center;    
     padding: 1.4rem 1.6rem 1.6rem;
@@ -155,7 +138,7 @@
 
 /* bootstrap acordeon personalizado --------------------------------------- */
 .section-faq {
-    max-width: 100%;
+    max-width: 90%;
     margin: 0 auto;
     // padding: 0.5rem 1rem;
 
@@ -164,16 +147,15 @@
         background-color: transparent;
         border: none;
         border-bottom: 1px solid $color-gold-ui; // linea de separacion
-        // color: $color-text-main;
     }  
 
     // boton de pregunta
     .accordion-button {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 600;
-        background-color: transparent;
+        @include font($fontPrimary, 1.5rem, 500);  
         padding: 1.2rem 0;
-        //color: $color-text-main;
+
+        background-color: transparent;
+        color: $color-text-main;
  
         &:not(.collapsed) {
             background-color: transparent;
@@ -184,16 +166,13 @@
             box-shadow: none; /* saca el color azul del borde */
             border-color: transparent;
         }    
-
-        // flecha?
-        &::after {
-            // display: none; /* Oculta la flecha */
-        }
     }
     
     // respuesta
     .accordion-body {
+        @include font($fontPrimary, 1.5rem, 300);
         padding: 0.5rem 0 1.2rem;
+        color: $color-text-main;
     }
 }
 
