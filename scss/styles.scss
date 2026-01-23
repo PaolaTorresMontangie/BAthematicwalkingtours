@@ -14,12 +14,12 @@
 
     /* cambio imagen header vertical */
     .index-header{    
-        background-image: url(../img/backgroundHero-vertical.jpeg);
+        background: url("../img/backgroundHero-vertical.jpeg"); 
     }
 
     .contenedor-hero {  
-        /* achico espacio a la izquierda, achico distancia entre elementos */        
-        @include paddingGap(2rem,1em);
+         /* achico espacio a la izquierda, achico distancia entre elementos */        
+         @include paddingGap(2rem,1em);
     }
 
     .hero-tituloSitio {
@@ -98,8 +98,8 @@
 
 
 /* responsive mobile */
-@media (max-width: $tamanioMobile) {    
-    
+@media (max-width: $tamanioMobile) {
+
     .hero-tituloSitio {
         /* achico el font-size */        
         @include font($fontAccent,2rem,600);

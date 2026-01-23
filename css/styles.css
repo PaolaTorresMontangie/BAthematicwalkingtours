@@ -62,8 +62,9 @@ a {
   background: url("../img/backgroundHero.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 95vh;
   position: relative;
+  min-height: 95vh;
+  height: auto;
 }
 
 .logotipo {
@@ -337,48 +338,22 @@ a {
 }
 
 /* grid para imagenes de tours ---------------------------------------------------- */
-.contenedor-grid-tours {
-  display: grid;
-  grid-template-areas: "imagen1 imagen1 imagen2 imagen2" "imagen1 imagen1 imagen3 imagen4";
-  grid-template-columns: 1fr 1fr 1fr 1fr; /* Cuatro columnas de igual tamaño y dos filas */
-  grid-template-rows: 12rem 12rem;
-  align-content: center;
-  justify-content: center;
-  align-items: start;
-  padding: 1rem;
-  margin: 1rem auto;
-  gap: 1rem; /* Espacio entre las celdas */
-  border-radius: 0.5rem;
-  background-color: #fdfaf3;
-  overflow: hidden;
+/* carrousel bootstrap ************************/
+.carousel {
+  position: relative;
 }
 
-.tours-imagen1 {
-  grid-area: imagen1; /* Asigna el elemento a la cuadrícula de área "imagen1" */
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.carousel-indicators {
+  pointer-events: none;
 }
 
-.tours-imagen2 {
-  grid-area: imagen2;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.carousel-indicators button {
+  pointer-events: auto;
 }
 
-.tours-imagen3 {
-  grid-area: imagen3;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.tours-imagen4 {
-  grid-area: imagen4;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 10;
 }
 
 /* paginas detalle de tours */
@@ -453,7 +428,7 @@ a {
 @media (max-width: 768px) {
   /* cambio imagen header vertical */
   .index-header {
-    background-image: url(../img/backgroundHero-vertical.jpeg);
+    background: url("../img/backgroundHero-vertical.jpeg");
   }
   .contenedor-hero {
     /* achico espacio a la izquierda, achico distancia entre elementos */

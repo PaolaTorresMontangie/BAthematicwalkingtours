@@ -44,8 +44,14 @@ p {
     background: url("../img/backgroundHero.jpeg"); 
     background-repeat: no-repeat;
     background-size: cover;
-    height: 95vh;
+    //height: 95vh;
     position: relative;
+
+// nuevo prueba
+    min-height: 95vh;
+    height: auto;
+
+
 }
 
 .logotipo {

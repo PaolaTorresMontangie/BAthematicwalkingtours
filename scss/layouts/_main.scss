@@ -183,43 +183,79 @@
 
 
 /* grid para imagenes de tours ---------------------------------------------------- */
-.contenedor-grid-tours {
-    display: grid;
-    grid-template-areas:
-    "imagen1 imagen1 imagen2 imagen2" 
-    "imagen1 imagen1 imagen3 imagen4";
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* Cuatro columnas de igual tamaño y dos filas */
-    grid-template-rows: 12rem 12rem;
-    align-content:center;
-    justify-content: center;
-    align-items: start;
-    padding: 1rem;
-    margin: 1rem auto;
-    gap: 1rem; /* Espacio entre las celdas */     
-    border-radius: 0.5rem;    
-    background-color: $color-bg-paper;
-    overflow: hidden;
+// .contenedor-grid-tours {
+//     display: grid;
+//     grid-template-areas:
+//     "imagen1 imagen1 imagen2 imagen2" 
+//     "imagen1 imagen1 imagen3 imagen4";
+//     grid-template-columns: 1fr 1fr 1fr 1fr; /* Cuatro columnas de igual tamaño y dos filas */
+//     grid-template-rows: 12rem 12rem;
+//     align-content:center;
+//     justify-content: center;
+//     align-items: start;
+//     padding: 1rem;
+//     margin: 1rem auto;
+//     gap: 1rem; /* Espacio entre las celdas */     
+//     border-radius: 0.5rem;    
+//     background-color: $color-bg-paper;
+//     overflow: hidden;
+// }
+
+// .tours-imagen1 {
+//     grid-area: imagen1;     /* Asigna el elemento a la cuadrícula de área "imagen1" */
+//     @include imagenGrilla;
+// }
+
+// .tours-imagen2 {
+//     grid-area: imagen2;
+//     @include imagenGrilla;
+// }
+
+// .tours-imagen3 {
+//     grid-area: imagen3;
+//     @include imagenGrilla;
+// }
+
+// .tours-imagen4 {
+//     grid-area: imagen4;
+//     @include imagenGrilla;
+// }
+
+/* carrousel bootstrap ************************/
+// .carousel {
+//   margin: 3rem auto;
+//   border-radius: 12px;
+//   overflow: hidden;
+// }
+
+// .carousel-item img {
+//   height: 60vh;
+//   object-fit: cover;
+// }
+
+// .carousel-control-prev,
+// .carousel-control-next {
+//   z-index: 5;
+// }
+
+.carousel {
+  position: relative;
 }
 
-.tours-imagen1 {
-    grid-area: imagen1;     /* Asigna el elemento a la cuadrícula de área "imagen1" */
-    @include imagenGrilla;
+.carousel-indicators {
+  pointer-events: none;
 }
 
-.tours-imagen2 {
-    grid-area: imagen2;
-    @include imagenGrilla;
+.carousel-indicators button {
+  pointer-events: auto;
 }
 
-.tours-imagen3 {
-    grid-area: imagen3;
-    @include imagenGrilla;
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 10;
 }
 
-.tours-imagen4 {
-    grid-area: imagen4;
-    @include imagenGrilla;
-}
+
 
 /* paginas detalle de tours */
 .contenedor-texto-tours {
