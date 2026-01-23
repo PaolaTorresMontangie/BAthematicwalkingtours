@@ -222,40 +222,21 @@
 // }
 
 /* carrousel bootstrap ************************/
-// .carousel {
-//   margin: 3rem auto;
-//   border-radius: 12px;
-//   overflow: hidden;
-// }
+ .carousel {
+   margin: 3rem auto;
+   border-radius: 12px;
+   overflow: hidden;
+ }
 
-// .carousel-item img {
-//   height: 60vh;
-//   object-fit: cover;
-// }
+ .carousel-item img {
+   height: 60vh;
+   object-fit: cover;
+ }
 
-// .carousel-control-prev,
-// .carousel-control-next {
-//   z-index: 5;
-// }
-
-.carousel {
-  position: relative;
-}
-
-.carousel-indicators {
-  pointer-events: none;
-}
-
-.carousel-indicators button {
-  pointer-events: auto;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  z-index: 10;
-}
-
-
+ .carousel-control-prev,
+ .carousel-control-next {
+   z-index: 5;
+ }
 
 /* paginas detalle de tours */
 .contenedor-texto-tours {
