@@ -19,8 +19,7 @@
     a {
         color: #fff;
         text-decoration: none;
-        font-weight: 600;
-        font-size: 1rem;
+        @include font($fontPrimary, 1rem, 600);
 
         &:hover {
             color: $color-bg-paper;
@@ -37,9 +36,9 @@
 }
 
 .footer-copy {
+    @include font($fontPrimary, 0.8rem, 400);    
     color: $color-bg-paper;    
     text-align: center;
-    font-size: 0.8rem;
     margin-top: 1.2rem;
 }
 

@@ -73,7 +73,7 @@
 }
 
 .titulo-secundario { 
-    @include font($fontAccent, 1.8rem, 400); 
+    @include font($fontAccent, 1.8rem, 500); 
     text-align: center;
 }
 
@@ -85,6 +85,7 @@
 }
 
 .tour-card {
+    @include flexColumn;
     background-color: $color-bg-paper;
     border-radius: 20px;
     padding-bottom: 0rem;
@@ -132,20 +133,21 @@
 .card-content {
     @include flexColumn;
     align-items: center;
-    justify-content: center;    
+    justify-content: flex-start;
+    flex: 1;    
     padding: 1.4rem 1.6rem 1.6rem;
 
     .btn-secondary {
         margin-top: auto;
     }
-
 }
+
+
 
 /* bootstrap acordeon personalizado --------------------------------------- */
 .section-faq {
     max-width: 90%;
     margin: 0 auto;
-    // padding: 0.5rem 1rem;
 
     // section de pregunta y respuesta
     .accordion-item {
@@ -180,46 +182,6 @@
         color: $color-text-main;
     }
 }
-
-
-/* grid para imagenes de tours ---------------------------------------------------- */
-// .contenedor-grid-tours {
-//     display: grid;
-//     grid-template-areas:
-//     "imagen1 imagen1 imagen2 imagen2" 
-//     "imagen1 imagen1 imagen3 imagen4";
-//     grid-template-columns: 1fr 1fr 1fr 1fr; /* Cuatro columnas de igual tamaño y dos filas */
-//     grid-template-rows: 12rem 12rem;
-//     align-content:center;
-//     justify-content: center;
-//     align-items: start;
-//     padding: 1rem;
-//     margin: 1rem auto;
-//     gap: 1rem; /* Espacio entre las celdas */     
-//     border-radius: 0.5rem;    
-//     background-color: $color-bg-paper;
-//     overflow: hidden;
-// }
-
-// .tours-imagen1 {
-//     grid-area: imagen1;     /* Asigna el elemento a la cuadrícula de área "imagen1" */
-//     @include imagenGrilla;
-// }
-
-// .tours-imagen2 {
-//     grid-area: imagen2;
-//     @include imagenGrilla;
-// }
-
-// .tours-imagen3 {
-//     grid-area: imagen3;
-//     @include imagenGrilla;
-// }
-
-// .tours-imagen4 {
-//     grid-area: imagen4;
-//     @include imagenGrilla;
-// }
 
 /* carrousel bootstrap ************************/
  .carousel {

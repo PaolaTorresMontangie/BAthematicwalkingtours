@@ -41,7 +41,7 @@ El sitio presenta:
 │   ├── faq.html
 │   ├── tourCementerioRecoleta.html
 │   ├── tourMasonesEnBA.html
-│   └── tourPalacioBarolo.html
+│   └── tourPIdeasRevolucionarias.html
 │
 ├── es/                       # Versión en español
 │   ├── index.html            # Home (ES)
@@ -51,7 +51,7 @@ El sitio presenta:
 │       ├── faq.html
 │       ├── tourCementerioRecoleta.html
 │       ├── tourMasonesEnBA.html
-│       └── tourPalacioBarolo.html
+│       └── tourIdeasRevolucionarias.html
 │
 ├── css/
 │   └── styles.css            # CSS compilado

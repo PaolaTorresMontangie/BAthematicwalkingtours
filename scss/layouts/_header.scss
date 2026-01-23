@@ -22,14 +22,6 @@ h1, h2, h3 {
     font-family: $fontAccent;
 }
 
-h1 {
-    font-size: 2.6rem;
-}
-
-h3 {
-    font-size: 1.2rem;
-}
-
 p {
     font-family: $fontPrimary;
 }
@@ -41,17 +33,12 @@ p {
 
 /* header con imagen de fondo */
 .index-header{    
-    background: url("../img/backgroundHero.jpeg"); 
+    background: url("../img/backgroundHero.png"); 
     background-repeat: no-repeat;
     background-size: cover;
-    //height: 95vh;
-    position: relative;
-
-// nuevo prueba
-    min-height: 95vh;
-    height: auto;
-
-
+    height: 95vh;
+    background-position-x: 100%;
+    background-position-y: -20%;
 }
 
 .logotipo {
