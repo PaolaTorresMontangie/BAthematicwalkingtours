@@ -9,7 +9,7 @@
 
 body {    
     font-family: $fontPrimary; 
-    background-color: $color-bg-general;
+    background-color: $color-bg-general;    
     color: $color-text-main;
     scroll-behavior: smooth;
     letter-spacing: 0.015em;
@@ -74,19 +74,19 @@ p {
 .hero-subtitulo {
     @include font($fontAccent, 2rem, 400);  
     width: 50%;
-    color: #fff;    
+    color: $color-text-inverse;    
 }
 
 .btn-hero {
     @extend %btnBase;
     @include font($fontPrimary, 1.5rem, 500);  
-    background-color: $color-brand-navy;
+    background-color: $color-primary;
     color: $color-bg-paper;
 
     letter-spacing: 0.05em; 
     padding: 0.7rem 1.8rem;
     border-radius: 10px; // piso el tamaño
-    border: 2px solid $color-gold-brand;
+    border: 2px solid $color-accent-light;
     box-shadow:
     0 6px 18px rgba(0, 0, 0, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.15);  
@@ -94,7 +94,7 @@ p {
 
 .btn-hero:hover {
   transform: translateY(-1px);
-  border-color: $color-gold-ui;
+  border-color: $color-accent;
 
   box-shadow:
     0 10px 26px rgba(0, 0, 0, 0.45),
@@ -103,7 +103,7 @@ p {
 
 /* bootstrap navbar personalizada color idem footer */
 .custom-navbar {
-    background-color: $color-brand-navy !important;
+    background-color: $color-primary !important;
     // menu desktop horizontal normal / mobile alineado a la derecha
     align-items: flex-end;
     text-align: right;    
@@ -114,20 +114,20 @@ p {
 
     /* link activo navbar */
     .nav-link[aria-current="page"] {
-        color: $color-gold-ui !important;
+        color: $color-accent !important;
     }
 
     a {
         @include font($fontPrimary, 1.3rem, 500);
-        color: #fff !important;
+        color: $color-text-inverse !important;
         padding-left: 0.5rem;
         padding-bottom: 0.5rem;
 
         &:hover {
-            color: $color-gold-ui; //$color-bg-paper; 
+            color: $color-accent; //$color-bg-paper; 
             text-decoration: none;
             // efecto glow
-            text-shadow: 0 0 5px $color-gold-ui;
+            text-shadow: 0 0 5px $color-accent;
         }
     }    
 }

@@ -2,18 +2,18 @@
 
 .btn-secondary {
     @extend %btnBase;
-    background-color: $color-gold-deep;  
+    background-color: $color-accent-dark;  
     color: $color-bg-paper;
 
     text-shadow: 2px 2px 2px $color-text-main;
     padding: 0.6rem 1.6rem;
-    border: 2px solid $color-gold-ui;
+    border: 2px solid $color-accent;
     box-shadow:
     0 3px 8px rgba(0, 0, 0, 0.15),
     inset 0 1px 0 rgba(255, 255, 255, 0.45);
 
     &:hover {
-        background-color: $color-gold-ui;
+        background-color: $color-accent;
         box-shadow:
         0 6px 14px rgba(0, 0, 0, 0.22),
         inset 0 1px 0 rgba(255, 255, 255, 0.4);
@@ -55,7 +55,7 @@
         background: linear-gradient(
         to right,
         transparent,
-        $color-gold-ui
+        $color-accent;
         );
     }
 
@@ -67,7 +67,7 @@
         background: linear-gradient(
         to left,
         transparent,
-        $color-gold-ui
+        $color-accent;
         );
     }    
 }
@@ -153,7 +153,7 @@
     .accordion-item {
         background-color: transparent;
         border: none;
-        border-bottom: 1px solid $color-gold-ui; // linea de separacion
+        border-bottom: 1px solid $color-accent; // linea de separacion
     }  
 
     // boton de pregunta

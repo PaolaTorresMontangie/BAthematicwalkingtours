@@ -1,9 +1,9 @@
 /****** footer layout *****************************************/
 .site-footer {
-    background-color: $color-brand-navy; 
+    background-color: $color-primary;
     padding: 2.5rem 0 1.2rem;
     /* borde dorado */
-    border-top: 3px solid $color-gold-ui;
+    border-top: 3px solid $color-accent;
 }
 
 .footer-content {
@@ -17,7 +17,7 @@
     gap: 2rem;
 
     a {
-        color: #fff;
+        color: $color-text-inverse;
         text-decoration: none;
         @include font($fontPrimary, 1rem, 600);
 
@@ -25,12 +25,12 @@
             color: $color-bg-paper;
             text-decoration: none;
             // efecto glow
-            text-shadow: 0 0 5px $color-gold-ui;
+            text-shadow: 0 0 5px $color-accent;
         }
 
         /* link activo footer */
         &[aria-current="page"] {
-            color: $color-gold-ui;
+            color: $color-accent;
         }    
     }
 }
@@ -45,7 +45,7 @@
 .linea-dorada {
     height: 2px; /* Grosor */
     width: 100%; /* Ancho */
-    background-color: $color-gold-ui; /* Color de la línea */
+    background-color: $color-accent; /* Color de la línea */
     margin: 20px auto; /* Márgenes superior/inferior y centrado */
     border: none; /* Elimina estilos de navegador por defecto */
 }

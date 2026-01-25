@@ -1,33 +1,43 @@
+
+
+$fontPrimary: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+$fontAccent: 'Lora', Georgia, 'Times New Roman', serif;
+
+// dimensiones de dispositivos para diseño responsive
+$tamanioDesktop: 1440px;    // desktop
+$tamanioTablet: 768px;      // tablet
+$tamanioMobile: 390px;      // mobile
+
+
+/* ==============================
+   COLOR SYSTEM
+   ============================== */
+
 /*
 | Rol                 | Variable            |
 | ------------------- | ------------------- |
 | Fondo general       | `$color-bg-general` |
 | Fondo claro / cards | `$color-bg-paper`   |
 | Texto principal     | `$color-text-main`  |
-| Azul marca          | `$color-brand-navy` |
-| Dorado UI           | `$color-gold-ui`    |
-| Dorado marca        | `$color-gold-brand` |
-| Dorado profundo     | `$color-gold-deep`  |
-*/
+| Azul marca          | `$color-primary` |
+| Dorado UI           | `$color-accent    |
+| Dorado marca        | `$color-accent-light:` |
+| Dorado profundo     | `$color-accent-dark`  |
+*/   
 
-$fontPrimary: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-$fontAccent: 'Lora', Georgia, 'Times New Roman', serif;
+/* Base */
+$color-bg-general: #f4eee6;     // Fondo general 
+$color-bg-paper: #fdfaf3;       // Fondo claro / cards / texto claro
+$color-text-main: #1f2a36;      // Texto principal
+$color-text-inverse: #ffffff;
 
-// Colores base
-$color-bg-general: #f4eee6;        // fondo general
-$color-bg-paper:   #fdfaf3;        // tarjetas, texto claro
-$color-text-main:  #1f2a36;        // texto principal oscuro
+/* Brand / Theme */
+$color-primary: #304a6f;        // azul marca: navbar, footer, CTA primario -- antes: brand-navy
+$color-accent: #b8a77a;         // dorado principal
+$color-accent-light: #d6b36a;   // Dorado brand (protagonista) / dorado claro
+$color-accent-dark: #a68458;    // Dorado profundo (relieve / hover)
 
-// Azul marca
-$color-brand-navy: #304a6f;        // navbar, footer, CTA primario //rgb(48,74,111)
-
-// Dorados
-$color-gold-ui: #b8a77a;            // Dorado estructural (UI)
-$color-gold-brand: #d6b36a;         // Dorado brand (protagonista)
-$color-gold-deep: #a68458;          // Dorado profundo (relieve / hover)
-
-
-// dimensiones de dispositivos para diseño responsive
-$tamanioDesktop: 1440px;    // desktop
-$tamanioTablet: 768px;      // tablet
-$tamanioMobile: 390px;      // mobile
+/* UI */
+$color-border-soft: $color-accent;
+$color-shadow-dark: rgba(0, 0, 0, 0.25);
+$color-overlay-dark: rgba(0, 0, 0, 0.4);
