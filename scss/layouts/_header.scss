@@ -48,6 +48,13 @@ p {
     height: auto;
 }
 
+/* contenedor con ancho limitado para pantallas grandes - agregado 06-08-2026 */
+.container__limit {
+  max-width: 1800px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+}
+
 /* contenedor para la descripcion del sitio */
 .contenedor-hero {
     @include flexColumn;

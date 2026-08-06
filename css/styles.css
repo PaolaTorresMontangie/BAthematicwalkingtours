@@ -6,17 +6,23 @@
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
+/* ==============================
+   COLOR SYSTEM
+   ============================== */
 /*
 | Rol                 | Variable            |
 | ------------------- | ------------------- |
 | Fondo general       | `$color-bg-general` |
 | Fondo claro / cards | `$color-bg-paper`   |
 | Texto principal     | `$color-text-main`  |
-| Azul marca          | `$color-brand-navy` |
-| Dorado UI           | `$color-gold-ui`    |
-| Dorado marca        | `$color-gold-brand` |
-| Dorado profundo     | `$color-gold-deep`  |
+| Azul marca          | `$color-primary` |
+| Dorado UI           | `$color-accent    |
+| Dorado marca        | `$color-accent-light:` |
+| Dorado profundo     | `$color-accent-dark`  |
 */
+/* Base */
+/* Brand / Theme */
+/* UI */
 /****** header layout *****************************************/
 /* reset y generales ********************/
 * {
@@ -66,6 +72,13 @@ a {
   height: auto;
 }
 
+/* contenedor con ancho limitado para pantallas grandes - agregado 06-08-2026 */
+.container__limit {
+  max-width: 1800px;
+  margin-inline: auto;
+  padding-inline: clamp(1rem, 4vw, 3rem);
+}
+
 /* contenedor para la descripcion del sitio */
 .contenedor-hero {
   display: flex;
@@ -98,7 +111,7 @@ a {
   font-size: 2rem;
   font-weight: 400;
   width: 50%;
-  color: #fff;
+  color: #ffffff;
 }
 
 .btn-hero {
@@ -136,7 +149,7 @@ a {
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1.3rem;
   font-weight: 500;
-  color: #fff !important;
+  color: #ffffff !important;
   padding-left: 0.5rem;
   padding-bottom: 0.5rem;
 }
@@ -383,7 +396,7 @@ a {
   gap: 2rem;
 }
 .footer-links a {
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
   font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 1rem;

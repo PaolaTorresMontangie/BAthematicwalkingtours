@@ -52,11 +52,7 @@
         content: "";
         width: 10rem;
         height: 2px;
-        background: linear-gradient(
-        to right,
-        transparent,
-        $color-accent;
-        );
+        background: linear-gradient(to right, transparent, $color-accent);
     }
 
     /* Línea derecha */
@@ -64,11 +60,7 @@
         content: "";
         width: 10rem;
         height: 2px;
-        background: linear-gradient(
-        to left,
-        transparent,
-        $color-accent;
-        );
+        background: linear-gradient(to left, transparent, $color-accent);
     }    
 }
 
